@@ -1,0 +1,189 @@
+@prefix : <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84> .
+
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84> rdf:type owl:Ontology ;
+                                                                               <http://purl.org/dc/elements/1.1/title> "Astrea mappings ontology" ;
+                                                                               <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ,
+                                                                                                                  "Alba Fernández Izquierdo" ,
+                                                                                                                  "Andrea Cimmino" ;
+                                                                               <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                                                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "0.0.1" ,
+                                                                                                                                     "ast" ;
+                                                                               rdfs:comment "This ontology  represents the mapping between components in different languages and how to obtain them" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#contains
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:domain :Component ;
+          rdfs:range :OWLConstruct ;
+          rdfs:label "Relation between the component and the set of constructs that includes" ,
+                     "contains" .
+
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#hasMapping
+:hasMapping rdf:type owl:ObjectProperty ;
+            owl:inverseOf :isMappedFrom ;
+            rdfs:comment "Relation between a component and its mapping" ;
+            rdfs:label "has mapping" .
+
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isExtractedBy
+:isExtractedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain :MappingRelation ;
+               rdfs:label "is extracted by" ,
+                          "relation between the mapping and the SPARQL query needed to extract the information" .
+
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom
+:isMappedFrom rdf:type owl:ObjectProperty ;
+              rdfs:domain :MappingRelation ;
+              rdfs:comment "Relation between the mapping and the source component" ;
+              rdfs:label "is mapped from" .
+
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedTo
+:isMappedTo rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :MappingRelation ;
+            rdfs:comment "Relation between the mapping and the result component" ;
+            rdfs:label "is mapped to" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#body
+:body rdf:type owl:DatatypeProperty ;
+      rdfs:domain :SPARQLQuery ;
+      rdfs:range xsd:string ;
+      rdfs:comment "body of the SPARQL query" ;
+      rdfs:label "body" .
+
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#category
+:category rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Construct ;
+          rdfs:range xsd:string ;
+          rdfs:comment "category of a construct" ;
+          rdfs:label "category" .
+
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#order
+:order rdf:type owl:DatatypeProperty ;
+       rdfs:domain :SPARQLQuery ;
+       rdfs:range xsd:integer ;
+       rdfs:comment "Order of the query" ;
+       rdfs:label "order" .
+
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#syntax
+:syntax rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Construct ;
+        rdfs:range xsd:string ;
+        rdfs:comment "syntax of the construct" ;
+        rdfs:label "syntax" .
+
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#topic
+:topic rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Component ;
+       rdfs:range xsd:string ;
+       rdfs:comment "topic of a component" ;
+       rdfs:label "topic" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component
+:Component rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasMapping ;
+                             owl:someValuesFrom :MappingRelation
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :contains ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Construct
+                           ] ;
+           rdfs:comment "Set of constructs of a language related to a particular topic" ;
+           rdfs:label "Component" .
+
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct
+:Construct rdf:type owl:Class ;
+           rdfs:label "Construct" .
+
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation
+:MappingRelation rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :isMappedFrom ;
+                                   owl:someValuesFrom :Component
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :isMappedTo ;
+                                   owl:someValuesFrom :Construct
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :isExtractedBy ;
+                                   owl:allValuesFrom :SPARQLQuery
+                                 ] ;
+                 rdfs:label "Mapping Relation" .
+
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#OWLConstruct
+:OWLConstruct rdf:type owl:Class ;
+              rdfs:subClassOf :Construct ;
+              rdfs:comment "Construct in OWL language" ;
+              rdfs:label "OWL Construct" .
+
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SHACLConstruct
+:SHACLConstruct rdf:type owl:Class ;
+                rdfs:subClassOf :Construct ;
+                rdfs:comment "Construct in SHACL language" ;
+                rdfs:label "SHACL Construct" .
+
+
+###  http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery
+:SPARQLQuery rdf:type owl:Class ;
+             rdfs:comment "Query in SPARQL that is needed to extract the information of the components to do the mapping" ;
+             rdfs:label "SPARQL query" .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

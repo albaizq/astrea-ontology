@@ -1,0 +1,83 @@
+{
+  "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "body" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#body",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isMappedFrom" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom",
+      "@type" : "@id"
+    },
+    "OWLConstruct" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#OWLConstruct"
+    },
+    "isMappedTo" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedTo",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "contains" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#contains",
+      "@type" : "@id"
+    },
+    "Construct" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct"
+    },
+    "hasMapping" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#hasMapping",
+      "@type" : "@id"
+    },
+    "SPARQLQuery" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "MappingRelation" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "order" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#order",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "isExtractedBy" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isExtractedBy",
+      "@type" : "@id"
+    },
+    "SHACLConstruct" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SHACLConstruct"
+    },
+    "syntax" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#syntax",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Component" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component"
+    },
+    "category" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#category",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "topic" : {
+      "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#topic",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    }
+  }
+}

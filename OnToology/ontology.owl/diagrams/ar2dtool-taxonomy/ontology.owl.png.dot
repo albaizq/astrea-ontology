@@ -1,0 +1,8 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:SHACLConstruct" "base:OWLConstruct" "base:Construct" ; /*classes style*/
+	"base:SHACLConstruct" -> "base:Construct" [ label = "rdfs:subClassOf" ];
+	"base:OWLConstruct" -> "base:Construct" [ label = "rdfs:subClassOf" ];
+
+}
