@@ -1,0 +1,179 @@
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84> <http://purl.org/dc/elements/1.1/title> "Astrea mappings ontology" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84> <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84> <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84> <http://purl.org/dc/terms/creator> "Andrea Cimmino" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84> <http://purl.org/vocab/vann/preferredNamespacePrefix> "0.0.1" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ast" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology  represents the mapping between components in different languages and how to obtain them" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#contains
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#contains> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#OWLConstruct> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#contains> <http://www.w3.org/2000/01/rdf-schema#label> "Relation between the component and the set of constructs that includes" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains" .
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#hasMapping
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#hasMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#hasMapping> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#hasMapping> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a component and its mapping" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#hasMapping> <http://www.w3.org/2000/01/rdf-schema#label> "has mapping" .
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isExtractedBy
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isExtractedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isExtractedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isExtractedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is extracted by" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isExtractedBy> <http://www.w3.org/2000/01/rdf-schema#label> "relation between the mapping and the SPARQL query needed to extract the information" .
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between the mapping and the source component" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "is mapped from" .
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedTo
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between the mapping and the result component" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedTo> <http://www.w3.org/2000/01/rdf-schema#label> "is mapped to" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#body
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#body> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#body> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#body> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#body> <http://www.w3.org/2000/01/rdf-schema#comment> "body of the SPARQL query" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#body> <http://www.w3.org/2000/01/rdf-schema#label> "body" .
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#category
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#category> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#category> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#category> <http://www.w3.org/2000/01/rdf-schema#comment> "category of a construct" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#category> <http://www.w3.org/2000/01/rdf-schema#label> "category" .
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#order
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#order> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#order> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#order> <http://www.w3.org/2000/01/rdf-schema#comment> "Order of the query" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#order> <http://www.w3.org/2000/01/rdf-schema#label> "order" .
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#syntax
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#syntax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#syntax> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#syntax> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#syntax> <http://www.w3.org/2000/01/rdf-schema#comment> "syntax of the construct" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#syntax> <http://www.w3.org/2000/01/rdf-schema#label> "syntax" .
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#topic
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#topic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#topic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#topic> <http://www.w3.org/2000/01/rdf-schema#comment> "topic of a component" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#topic> <http://www.w3.org/2000/01/rdf-schema#label> "topic" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#hasMapping> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#contains> .
+_:genid2 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of constructs of a language related to a particular topic" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component> <http://www.w3.org/2000/01/rdf-schema#label> "Component" .
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct> <http://www.w3.org/2000/01/rdf-schema#label> "Construct" .
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedTo> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isExtractedBy> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation> <http://www.w3.org/2000/01/rdf-schema#label> "Mapping Relation" .
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#OWLConstruct
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#OWLConstruct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#OWLConstruct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#OWLConstruct> <http://www.w3.org/2000/01/rdf-schema#comment> "Construct in OWL language" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#OWLConstruct> <http://www.w3.org/2000/01/rdf-schema#label> "OWL Construct" .
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SHACLConstruct
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SHACLConstruct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SHACLConstruct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SHACLConstruct> <http://www.w3.org/2000/01/rdf-schema#comment> "Construct in SHACL language" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SHACLConstruct> <http://www.w3.org/2000/01/rdf-schema#label> "SHACL Construct" .
+# 
+# http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery> <http://www.w3.org/2000/01/rdf-schema#comment> "Query in SPARQL that is needed to extract the information of the components to do the mapping" .
+<http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery> <http://www.w3.org/2000/01/rdf-schema#label> "SPARQL query" .
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
