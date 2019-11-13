@@ -2,26 +2,26 @@ digraph ar2dtool_diagram {
 rankdir=LR;
 size="1501"
 node [shape = rectangle, color="orange"]; "base:SPARQLQuery" "base:OWLConstruct" "base:MappingRelation" "base:Construct" "base:Component" ; /*classes style*/
-	"http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
-	"http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
-	"NULL" -> "base:Construct" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "base:SPARQLQuery" [ label = "owl:allValuesFrom" ];
+	"https://w3id.org/def/astrea" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
+	"https://w3id.org/def/astrea" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
 	"NULL" -> "base:MappingRelation" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:Construct" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:contains" [ label = "owl:onProperty" ];
+	"NULL" -> "base:isMappedFrom" [ label = "owl:onProperty" ];
+	"NULL" -> "base:isExtractedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Construct" [ label = "owl:onClass" ];
 	"NULL" -> "base:isMappedTo" [ label = "owl:onProperty" ];
 	"NULL" -> "base:Component" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "base:isMappedFrom" [ label = "owl:onProperty" ];
-	"NULL" -> "base:Construct" [ label = "owl:onClass" ];
-	"NULL" -> "base:isExtractedBy" [ label = "owl:onProperty" ];
-	"NULL" -> "base:contains" [ label = "owl:onProperty" ];
 	"NULL" -> "base:hasMapping" [ label = "owl:onProperty" ];
-	"base:Construct" -> "xsd:string" [ label = "base:category" ];
-	"base:SPARQLQuery" -> "xsd:string" [ label = "base:body" ];
-	"base:Component" -> "xsd:string" [ label = "base:topic" ];
+	"NULL" -> "base:SPARQLQuery" [ label = "owl:allValuesFrom" ];
 	"base:MappingRelation" -> "owl:Thing" [ label = "base:isExtractedBy" ];
 	"base:Construct" -> "xsd:string" [ label = "base:syntax" ];
-	"base:SPARQLQuery" -> "xsd:integer" [ label = "base:order" ];
-	"base:Component" -> "base:OWLConstruct" [ label = "base:contains" ];
+	"base:Construct" -> "xsd:string" [ label = "base:category" ];
 	"base:MappingRelation" -> "owl:Thing" [ label = "base:isMappedTo" ];
+	"base:SPARQLQuery" -> "xsd:integer" [ label = "base:order" ];
+	"base:SPARQLQuery" -> "xsd:string" [ label = "base:body" ];
 	"base:MappingRelation" -> "owl:Thing" [ label = "base:isMappedFrom" ];
+	"base:Component" -> "xsd:string" [ label = "base:topic" ];
+	"base:Component" -> "base:OWLConstruct" [ label = "base:contains" ];
 
 }

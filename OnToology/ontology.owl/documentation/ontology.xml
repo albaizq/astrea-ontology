@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#"
-     xml:base="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84"
+<rdf:RDF xmlns="https://w3id.org/def/astrea#"
+     xml:base="https://w3id.org/def/astrea"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,15 +9,15 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84">
+    <owl:Ontology rdf:about="https://w3id.org/def/astrea">
         <dc:title>Astrea mappings ontology</dc:title>
         <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
         <terms:creator>Alba Fernández Izquierdo</terms:creator>
         <terms:creator>Andrea Cimmino</terms:creator>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-        <vann:preferredNamespacePrefix>0.0.1</vann:preferredNamespacePrefix>
         <vann:preferredNamespacePrefix>ast</vann:preferredNamespacePrefix>
         <rdfs:comment>This ontology  represents the mapping between components in different languages and how to obtain them</rdfs:comment>
+        <owl:versionInfo>0.0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -81,57 +81,57 @@
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#contains -->
+    <!-- https://w3id.org/def/astrea#contains -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#contains">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#OWLConstruct"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#contains">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/astrea#OWLConstruct"/>
         <rdfs:label>Relation between the component and the set of constructs that includes</rdfs:label>
         <rdfs:label>contains</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#hasMapping -->
+    <!-- https://w3id.org/def/astrea#hasMapping -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#hasMapping">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#hasMapping">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/astrea#isMappedFrom"/>
         <rdfs:comment>Relation between a component and its mapping</rdfs:comment>
         <rdfs:label>has mapping</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isExtractedBy -->
+    <!-- https://w3id.org/def/astrea#isExtractedBy -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isExtractedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#isExtractedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#MappingRelation"/>
         <rdfs:label>is extracted by</rdfs:label>
         <rdfs:label>relation between the mapping and the SPARQL query needed to extract the information</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom -->
+    <!-- https://w3id.org/def/astrea#isMappedFrom -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#isMappedFrom">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#MappingRelation"/>
         <rdfs:comment>Relation between the mapping and the source component</rdfs:comment>
         <rdfs:label>is mapped from</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedTo -->
+    <!-- https://w3id.org/def/astrea#isMappedTo -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedTo">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#isMappedTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#MappingRelation"/>
         <rdfs:comment>Relation between the mapping and the result component</rdfs:comment>
         <rdfs:label>is mapped to</rdfs:label>
     </owl:ObjectProperty>
@@ -150,11 +150,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#body -->
+    <!-- https://w3id.org/def/astrea#body -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#body">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#body">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#SPARQLQuery"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>body of the SPARQL query</rdfs:comment>
         <rdfs:label>body</rdfs:label>
@@ -162,11 +162,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#category -->
+    <!-- https://w3id.org/def/astrea#category -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#category">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#category">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Construct"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>category of a construct</rdfs:comment>
         <rdfs:label>category</rdfs:label>
@@ -174,11 +174,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#order -->
+    <!-- https://w3id.org/def/astrea#order -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#order">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#order">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#SPARQLQuery"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Order of the query</rdfs:comment>
         <rdfs:label>order</rdfs:label>
@@ -186,11 +186,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#syntax -->
+    <!-- https://w3id.org/def/astrea#syntax -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#syntax">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#syntax">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Construct"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>syntax of the construct</rdfs:comment>
         <rdfs:label>syntax</rdfs:label>
@@ -198,11 +198,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#topic -->
+    <!-- https://w3id.org/def/astrea#topic -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#topic">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#topic">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Component"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>topic of a component</rdfs:comment>
         <rdfs:label>topic</rdfs:label>
@@ -222,21 +222,21 @@
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component -->
+    <!-- https://w3id.org/def/astrea#Component -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component">
+    <owl:Class rdf:about="https://w3id.org/def/astrea#Component">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#hasMapping"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#hasMapping"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/astrea#MappingRelation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#contains"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#contains"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct"/>
+                <owl:onClass rdf:resource="https://w3id.org/def/astrea#Construct"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Set of constructs of a language related to a particular topic</rdfs:comment>
@@ -245,35 +245,35 @@
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct -->
+    <!-- https://w3id.org/def/astrea#Construct -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct">
+    <owl:Class rdf:about="https://w3id.org/def/astrea#Construct">
         <rdfs:label>Construct</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation -->
+    <!-- https://w3id.org/def/astrea#MappingRelation -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation">
+    <owl:Class rdf:about="https://w3id.org/def/astrea#MappingRelation">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#isMappedFrom"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/astrea#Component"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedTo"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#isMappedTo"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/astrea#Construct"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isExtractedBy"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#isExtractedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/astrea#SPARQLQuery"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Mapping Relation</rdfs:label>
@@ -281,32 +281,32 @@
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#OWLConstruct -->
+    <!-- https://w3id.org/def/astrea#OWLConstruct -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#OWLConstruct">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct"/>
+    <owl:Class rdf:about="https://w3id.org/def/astrea#OWLConstruct">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/astrea#Construct"/>
         <rdfs:comment>Construct in OWL language</rdfs:comment>
         <rdfs:label>OWL Construct</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SHACLConstruct -->
+    <!-- https://w3id.org/def/astrea#SHACLConstruct -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SHACLConstruct">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct"/>
+    <owl:Class rdf:about="https://w3id.org/def/astrea#SHACLConstruct">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/astrea#Construct"/>
         <rdfs:comment>Construct in SHACL language</rdfs:comment>
         <rdfs:label>SHACL Construct</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery -->
+    <!-- https://w3id.org/def/astrea#SPARQLQuery -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery">
+    <owl:Class rdf:about="https://w3id.org/def/astrea#SPARQLQuery">
         <rdfs:comment>Query in SPARQL that is needed to extract the information of the components to do the mapping</rdfs:comment>
         <rdfs:label>SPARQL query</rdfs:label>
     </owl:Class>
