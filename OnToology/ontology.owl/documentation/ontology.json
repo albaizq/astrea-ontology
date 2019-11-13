@@ -2,10 +2,10 @@
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#hasMapping"
+    "@id" : "https://w3id.org/def/astrea#hasMapping"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation"
+    "@id" : "https://w3id.org/def/astrea#MappingRelation"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -15,37 +15,37 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct"
+    "@id" : "https://w3id.org/def/astrea#Construct"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#contains"
+    "@id" : "https://w3id.org/def/astrea#contains"
   } ]
 }, {
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom"
+    "@id" : "https://w3id.org/def/astrea#isMappedFrom"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component"
+    "@id" : "https://w3id.org/def/astrea#Component"
   } ]
 }, {
   "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedTo"
+    "@id" : "https://w3id.org/def/astrea#isMappedTo"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct"
+    "@id" : "https://w3id.org/def/astrea#Construct"
   } ]
 }, {
   "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery"
+    "@id" : "https://w3id.org/def/astrea#SPARQLQuery"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isExtractedBy"
+    "@id" : "https://w3id.org/def/astrea#isExtractedBy"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/title",
@@ -60,7 +60,10 @@
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84",
+  "@id" : "http://www.w3.org/2002/07/owl#versionInfo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/astrea",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@value" : "Astrea mappings ontology"
@@ -76,15 +79,16 @@
     "@id" : "http://purl.org/NET/rdflicense/cc-by4.0"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "0.0.1"
-  }, {
     "@value" : "ast"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This ontology  represents the mapping between components in different languages and how to obtain them"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.0.2"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component",
+  "@id" : "https://w3id.org/def/astrea#Component",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Set of constructs of a language related to a particular topic"
@@ -98,13 +102,13 @@
     "@id" : "_:genid2"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct",
+  "@id" : "https://w3id.org/def/astrea#Construct",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Construct"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation",
+  "@id" : "https://w3id.org/def/astrea#MappingRelation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Mapping Relation"
@@ -117,7 +121,7 @@
     "@id" : "_:genid5"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#OWLConstruct",
+  "@id" : "https://w3id.org/def/astrea#OWLConstruct",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Construct in OWL language"
@@ -126,10 +130,10 @@
     "@value" : "OWL Construct"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct"
+    "@id" : "https://w3id.org/def/astrea#Construct"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SHACLConstruct",
+  "@id" : "https://w3id.org/def/astrea#SHACLConstruct",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Construct in SHACL language"
@@ -138,10 +142,10 @@
     "@value" : "SHACL Construct"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct"
+    "@id" : "https://w3id.org/def/astrea#Construct"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery",
+  "@id" : "https://w3id.org/def/astrea#SPARQLQuery",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Query in SPARQL that is needed to extract the information of the components to do the mapping"
@@ -150,13 +154,13 @@
     "@value" : "SPARQL query"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#body",
+  "@id" : "https://w3id.org/def/astrea#body",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "body of the SPARQL query"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery"
+    "@id" : "https://w3id.org/def/astrea#SPARQLQuery"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "body"
@@ -165,13 +169,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#category",
+  "@id" : "https://w3id.org/def/astrea#category",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "category of a construct"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct"
+    "@id" : "https://w3id.org/def/astrea#Construct"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "category"
@@ -180,10 +184,10 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#contains",
+  "@id" : "https://w3id.org/def/astrea#contains",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component"
+    "@id" : "https://w3id.org/def/astrea#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Relation between the component and the set of constructs that includes"
@@ -191,10 +195,10 @@
     "@value" : "contains"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#OWLConstruct"
+    "@id" : "https://w3id.org/def/astrea#OWLConstruct"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#hasMapping",
+  "@id" : "https://w3id.org/def/astrea#hasMapping",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Relation between a component and its mapping"
@@ -203,13 +207,13 @@
     "@value" : "has mapping"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom"
+    "@id" : "https://w3id.org/def/astrea#isMappedFrom"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isExtractedBy",
+  "@id" : "https://w3id.org/def/astrea#isExtractedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation"
+    "@id" : "https://w3id.org/def/astrea#MappingRelation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "is extracted by"
@@ -217,37 +221,37 @@
     "@value" : "relation between the mapping and the SPARQL query needed to extract the information"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedFrom",
+  "@id" : "https://w3id.org/def/astrea#isMappedFrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Relation between the mapping and the source component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation"
+    "@id" : "https://w3id.org/def/astrea#MappingRelation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "is mapped from"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#isMappedTo",
+  "@id" : "https://w3id.org/def/astrea#isMappedTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Relation between the mapping and the result component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#MappingRelation"
+    "@id" : "https://w3id.org/def/astrea#MappingRelation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "is mapped to"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#order",
+  "@id" : "https://w3id.org/def/astrea#order",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Order of the query"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#SPARQLQuery"
+    "@id" : "https://w3id.org/def/astrea#SPARQLQuery"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "order"
@@ -256,13 +260,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#syntax",
+  "@id" : "https://w3id.org/def/astrea#syntax",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "syntax of the construct"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Construct"
+    "@id" : "https://w3id.org/def/astrea#Construct"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "syntax"
@@ -271,13 +275,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#topic",
+  "@id" : "https://w3id.org/def/astrea#topic",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "topic of a component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/ux360cak/ontologies/2019/10/untitled-ontology-84#Component"
+    "@id" : "https://w3id.org/def/astrea#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "topic"
@@ -285,7 +289,4 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
-}, {
-  "@id" : "http://www.w3.org/2002/07/owl#versionInfo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]
