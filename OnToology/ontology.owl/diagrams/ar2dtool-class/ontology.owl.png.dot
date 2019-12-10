@@ -1,27 +1,19 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "base:SPARQLQuery" "base:OWLConstruct" "base:MappingRelation" "base:Construct" "base:Component" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "base:Pattern" "base:MappingImplementation" "base:Construct" ; /*classes style*/
 	"https://w3id.org/def/astrea" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
 	"https://w3id.org/def/astrea" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
-	"NULL" -> "base:MappingRelation" [ label = "owl:someValuesFrom" ];
+	"base:statement" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "base:Pattern" [ label = "owl:onClass" ];
 	"NULL" -> "base:Construct" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "base:contains" [ label = "owl:onProperty" ];
-	"NULL" -> "base:isMappedFrom" [ label = "owl:onProperty" ];
-	"NULL" -> "base:isExtractedBy" [ label = "owl:onProperty" ];
-	"NULL" -> "base:Construct" [ label = "owl:onClass" ];
-	"NULL" -> "base:isMappedTo" [ label = "owl:onProperty" ];
-	"NULL" -> "base:Component" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "base:hasMapping" [ label = "owl:onProperty" ];
-	"NULL" -> "base:SPARQLQuery" [ label = "owl:allValuesFrom" ];
-	"base:MappingRelation" -> "owl:Thing" [ label = "base:isExtractedBy" ];
-	"base:Construct" -> "xsd:string" [ label = "base:syntax" ];
-	"base:Construct" -> "xsd:string" [ label = "base:category" ];
-	"base:MappingRelation" -> "owl:Thing" [ label = "base:isMappedTo" ];
-	"base:SPARQLQuery" -> "xsd:integer" [ label = "base:order" ];
-	"base:SPARQLQuery" -> "xsd:string" [ label = "base:body" ];
-	"base:MappingRelation" -> "owl:Thing" [ label = "base:isMappedFrom" ];
-	"base:Component" -> "xsd:string" [ label = "base:topic" ];
-	"base:Component" -> "base:OWLConstruct" [ label = "base:contains" ];
+	"NULL" -> "base:involves" [ label = "owl:onProperty" ];
+	"NULL" -> "base:MappingImplementation" [ label = "owl:onClass" ];
+	"NULL" -> "base:isTranslatedBy" [ label = "owl:onProperty" ];
+	"base:Pattern" -> "xsd:string" [ label = "base:statement" ];
+	"base:Pattern" -> "base:Pattern" [ label = "base:isMappedBy" ];
+	"base:Pattern" -> "base:MappingImplementation" [ label = "base:isTranslatedBy" ];
+	"base:MappingImplementation" -> "xsd:string" [ label = "base:query" ];
+	"base:MappingImplementation" -> "base:Pattern" [ label = "base:hasTarget" ];
 
 }
