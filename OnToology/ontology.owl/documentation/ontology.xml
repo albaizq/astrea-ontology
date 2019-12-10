@@ -81,59 +81,49 @@
     
 
 
-    <!-- https://w3id.org/def/astrea#contains -->
+    <!-- https://w3id.org/def/astrea#hasTarget -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#contains">
-        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Component"/>
-        <rdfs:range rdf:resource="https://w3id.org/def/astrea#OWLConstruct"/>
-        <rdfs:label>Relation between the component and the set of constructs that includes</rdfs:label>
-        <rdfs:label>contains</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#hasTarget">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#MappingImplementation"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/astrea#Pattern"/>
+        <rdfs:comment>Link between the mapping implementation and  the target pattern</rdfs:comment>
+        <rdfs:label>has target</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/def/astrea#hasMapping -->
+    <!-- https://w3id.org/def/astrea#involves -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#hasMapping">
-        <owl:inverseOf rdf:resource="https://w3id.org/def/astrea#isMappedFrom"/>
-        <rdfs:comment>Relation between a component and its mapping</rdfs:comment>
-        <rdfs:label>has mapping</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#involves">
+        <rdfs:label>Relation between a pattern an the elements that involves</rdfs:label>
+        <rdfs:label>involves</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/def/astrea#isExtractedBy -->
+    <!-- https://w3id.org/def/astrea#isMappedBy -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#isExtractedBy">
-        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#MappingRelation"/>
-        <rdfs:label>is extracted by</rdfs:label>
-        <rdfs:label>relation between the mapping and the SPARQL query needed to extract the information</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#isMappedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Pattern"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/astrea#Pattern"/>
+        <rdfs:comment>Relation between two patterns that are mapped</rdfs:comment>
+        <rdfs:label>is mapped by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/def/astrea#isMappedFrom -->
+    <!-- https://w3id.org/def/astrea#isTranslatedBy -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#isMappedFrom">
-        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#MappingRelation"/>
-        <rdfs:comment>Relation between the mapping and the source component</rdfs:comment>
-        <rdfs:label>is mapped from</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/def/astrea#isMappedTo -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#isMappedTo">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#MappingRelation"/>
-        <rdfs:comment>Relation between the mapping and the result component</rdfs:comment>
-        <rdfs:label>is mapped to</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#isTranslatedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Pattern"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/astrea#MappingImplementation"/>
+        <rdfs:comment>Relation between a pattern and the mapping implementations that allows its translation</rdfs:comment>
+        <rdfs:label>is translated by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -150,62 +140,27 @@
     
 
 
-    <!-- https://w3id.org/def/astrea#body -->
+    <!-- https://w3id.org/def/astrea#query -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#body">
-        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#SPARQLQuery"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#query">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#MappingImplementation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>body of the SPARQL query</rdfs:comment>
-        <rdfs:label>body</rdfs:label>
+        <rdfs:comment>query that allows to translate the source pattern and the target pattern</rdfs:comment>
+        <rdfs:label>query</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/def/astrea#category -->
+    <!-- https://w3id.org/def/astrea#statement -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#category">
-        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Construct"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#statement">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Pattern"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>category of a construct</rdfs:comment>
-        <rdfs:label>category</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/astrea#order -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#order">
-        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#SPARQLQuery"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment>Order of the query</rdfs:comment>
-        <rdfs:label>order</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/astrea#syntax -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#syntax">
-        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Construct"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>syntax of the construct</rdfs:comment>
-        <rdfs:label>syntax</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/astrea#topic -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#topic">
-        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Component"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>topic of a component</rdfs:comment>
-        <rdfs:label>topic</rdfs:label>
+        <rdfs:comment>Statement included in the pattern</rdfs:comment>
+        <rdfs:label>statement</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -222,29 +177,6 @@
     
 
 
-    <!-- https://w3id.org/def/astrea#Component -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/astrea#Component">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#hasMapping"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/def/astrea#MappingRelation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#contains"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/def/astrea#Construct"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>Set of constructs of a language related to a particular topic</rdfs:comment>
-        <rdfs:label>Component</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/def/astrea#Construct -->
 
 
@@ -254,40 +186,64 @@
     
 
 
-    <!-- https://w3id.org/def/astrea#MappingRelation -->
+    <!-- https://w3id.org/def/astrea#MappingImplementation -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/astrea#MappingRelation">
+    <owl:Class rdf:about="https://w3id.org/def/astrea#MappingImplementation">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#isMappedFrom"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/def/astrea#Component"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/astrea#Pattern"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Implementation of the mappings by means of a query that allows to translate a source pattern into a target pattern</rdfs:comment>
+        <rdfs:label>Mapping implementation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/astrea#OntologPattern -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#OntologPattern">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/astrea#Pattern"/>
+        <rdfs:comment>Set of OWL or RDFS axioms</rdfs:comment>
+        <rdfs:label>Ontology pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/astrea#OntologyConstruct -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#OntologyConstruct">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/astrea#Construct"/>
+        <rdfs:comment>Construct from OWL, RDF, RDFS or XSD language</rdfs:comment>
+        <rdfs:label>Ontology construct</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/astrea#Pattern -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#Pattern">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#isMappedTo"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#involves"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/def/astrea#Construct"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#isExtractedBy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/def/astrea#SPARQLQuery"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#isTranslatedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/astrea#MappingImplementation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>Mapping Relation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/astrea#OWLConstruct -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/astrea#OWLConstruct">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/astrea#Construct"/>
-        <rdfs:comment>Construct in OWL language</rdfs:comment>
-        <rdfs:label>OWL Construct</rdfs:label>
+        <rdfs:comment>Set of statments</rdfs:comment>
+        <rdfs:label>Pattern</rdfs:label>
     </owl:Class>
     
 
@@ -297,18 +253,19 @@
 
     <owl:Class rdf:about="https://w3id.org/def/astrea#SHACLConstruct">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/astrea#Construct"/>
-        <rdfs:comment>Construct in SHACL language</rdfs:comment>
-        <rdfs:label>SHACL Construct</rdfs:label>
+        <rdfs:comment>Construct from SHACL language</rdfs:comment>
+        <rdfs:label>SHACL construct</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/def/astrea#SPARQLQuery -->
+    <!-- https://w3id.org/def/astrea#SHACLPattern -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/astrea#SPARQLQuery">
-        <rdfs:comment>Query in SPARQL that is needed to extract the information of the components to do the mapping</rdfs:comment>
-        <rdfs:label>SPARQL query</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/def/astrea#SHACLPattern">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/astrea#Pattern"/>
+        <rdfs:comment>Set of SHACL statements</rdfs:comment>
+        <rdfs:label>SHACL pattern</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
