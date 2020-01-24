@@ -17,7 +17,7 @@
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <vann:preferredNamespacePrefix>ast</vann:preferredNamespacePrefix>
         <rdfs:comment>This ontology  represents the mapping between components in different languages and how to obtain them</rdfs:comment>
-        <owl:versionInfo>0.0.2</owl:versionInfo>
+        <owl:versionInfo>0.1.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -103,15 +103,15 @@
     
 
 
-    <!-- https://w3id.org/def/astrea#isMappedBy -->
+    <!-- https://w3id.org/def/astrea#isMappedTo -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#isMappedBy">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#isMappedTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Pattern"/>
         <rdfs:range rdf:resource="https://w3id.org/def/astrea#Pattern"/>
         <rdfs:comment>Relation between two patterns that are mapped</rdfs:comment>
-        <rdfs:label>is mapped by</rdfs:label>
+        <rdfs:label>is mapped to</rdfs:label>
     </owl:ObjectProperty>
     
 

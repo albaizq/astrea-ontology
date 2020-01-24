@@ -6,7 +6,7 @@
 <https://w3id.org/def/astrea> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <https://w3id.org/def/astrea> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ast" .
 <https://w3id.org/def/astrea> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology  represents the mapping between components in different languages and how to obtain them" .
-<https://w3id.org/def/astrea> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2" .
+<https://w3id.org/def/astrea> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
 # 
 # 
 # #################################################################
@@ -52,13 +52,13 @@
 <https://w3id.org/def/astrea#involves> <http://www.w3.org/2000/01/rdf-schema#label> "Relation between a pattern an the elements that involves" .
 <https://w3id.org/def/astrea#involves> <http://www.w3.org/2000/01/rdf-schema#label> "involves" .
 # 
-# https://w3id.org/def/astrea#isMappedBy
-<https://w3id.org/def/astrea#isMappedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/astrea#isMappedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
-<https://w3id.org/def/astrea#isMappedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/astrea#Pattern> .
-<https://w3id.org/def/astrea#isMappedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/astrea#Pattern> .
-<https://w3id.org/def/astrea#isMappedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between two patterns that are mapped" .
-<https://w3id.org/def/astrea#isMappedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is mapped by" .
+# https://w3id.org/def/astrea#isMappedTo
+<https://w3id.org/def/astrea#isMappedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/astrea#isMappedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/def/astrea#isMappedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/astrea#Pattern> .
+<https://w3id.org/def/astrea#isMappedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/astrea#Pattern> .
+<https://w3id.org/def/astrea#isMappedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between two patterns that are mapped" .
+<https://w3id.org/def/astrea#isMappedTo> <http://www.w3.org/2000/01/rdf-schema#label> "is mapped to" .
 # 
 # https://w3id.org/def/astrea#isTranslatedBy
 <https://w3id.org/def/astrea#isTranslatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

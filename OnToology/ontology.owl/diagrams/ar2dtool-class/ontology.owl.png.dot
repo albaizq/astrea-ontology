@@ -5,13 +5,13 @@ node [shape = rectangle, color="orange"]; "base:Pattern" "base:MappingImplementa
 	"https://w3id.org/def/astrea" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
 	"https://w3id.org/def/astrea" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
 	"base:statement" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "base:MappingImplementation" [ label = "owl:onClass" ];
+	"NULL" -> "base:isTranslatedBy" [ label = "owl:onProperty" ];
 	"NULL" -> "base:Pattern" [ label = "owl:onClass" ];
 	"NULL" -> "base:Construct" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:involves" [ label = "owl:onProperty" ];
-	"NULL" -> "base:MappingImplementation" [ label = "owl:onClass" ];
-	"NULL" -> "base:isTranslatedBy" [ label = "owl:onProperty" ];
 	"base:Pattern" -> "xsd:string" [ label = "base:statement" ];
-	"base:Pattern" -> "base:Pattern" [ label = "base:isMappedBy" ];
+	"base:Pattern" -> "base:Pattern" [ label = "base:isMappedTo" ];
 	"base:Pattern" -> "base:MappingImplementation" [ label = "base:isTranslatedBy" ];
 	"base:MappingImplementation" -> "xsd:string" [ label = "base:query" ];
 	"base:MappingImplementation" -> "base:Pattern" [ label = "base:hasTarget" ];

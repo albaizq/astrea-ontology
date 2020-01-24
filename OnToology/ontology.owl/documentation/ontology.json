@@ -71,7 +71,7 @@
     "@value" : "This ontology  represents the mapping between components in different languages and how to obtain them"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.0.2"
+    "@value" : "0.1.0"
   } ]
 }, {
   "@id" : "https://w3id.org/def/astrea#Construct",
@@ -177,7 +177,7 @@
     "@value" : "involves"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/astrea#isMappedBy",
+  "@id" : "https://w3id.org/def/astrea#isMappedTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Relation between two patterns that are mapped"
@@ -186,7 +186,7 @@
     "@id" : "https://w3id.org/def/astrea#Pattern"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "is mapped by"
+    "@value" : "is mapped to"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/def/astrea#Pattern"
