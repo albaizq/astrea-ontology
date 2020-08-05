@@ -12,7 +12,7 @@
                                <http://purl.org/dc/terms/creator> "Andrea Cimmino" ;
                                <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" ;
-                               rdfs:comment "This ontology  represents the mapping between components in different languages and how to obtain them" ;
+                               rdfs:comment "This ontology represents the mappings between SHACL and OWL and how to obtain them" ;
                                <http://purl.org/dc/elements/1.1/title> "Astrea mappings ontology" ;
                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "astrea" .
 
@@ -76,13 +76,13 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                      "involves" .
 
 
-###  https://w3id.org/def/astrea#isMappedBy
-:isMappedBy rdf:type owl:ObjectProperty ,
+###  https://w3id.org/def/astrea#isMappedTo
+:isMappedTo rdf:type owl:ObjectProperty ,
                      owl:SymmetricProperty ;
             rdfs:domain :Pattern ;
             rdfs:range :Pattern ;
             rdfs:comment "Relation between two patterns that are mapped" ;
-            rdfs:label "is mapped by" .
+            rdfs:label "is mapped to" .
 
 
 ###  https://w3id.org/def/astrea#isTranslatedBy
