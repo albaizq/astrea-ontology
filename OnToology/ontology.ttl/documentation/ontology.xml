@@ -15,9 +15,9 @@
         <terms:creator>Alba Fernández Izquierdo</terms:creator>
         <terms:creator>Andrea Cimmino</terms:creator>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-        <vann:preferredNamespacePrefix>ast</vann:preferredNamespacePrefix>
-        <rdfs:comment>This ontology  represents the mapping between components in different languages and how to obtain them</rdfs:comment>
-        <owl:versionInfo>0.1.0</owl:versionInfo>
+        <vann:preferredNamespacePrefix>astrea</vann:preferredNamespacePrefix>
+        <rdfs:comment>This ontology represents the mappings between SHACL and OWL and how to obtain them</rdfs:comment>
+        <owl:versionInfo>0.1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -81,6 +81,36 @@
     
 
 
+    <!-- https://w3id.org/def/astrea#contains -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#contains">
+        <rdfs:label>Relationship between a report and a shape included in it</rdfs:label>
+        <rdfs:label>contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/astrea#generates -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#generates">
+        <rdfs:comment>Relationship between a construct and the shape it generates</rdfs:comment>
+        <rdfs:label>generates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/astrea#generatesShapesFrom -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#generatesShapesFrom">
+        <rdfs:comment>Link between the report and its entries. Such entries includes the  ontologies from which the shapes are generated and the status of such generation. This link allows to keep track of potential errors that appear during the shapes generation.</rdfs:comment>
+        <rdfs:label>generates shapes from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/astrea#hasTarget -->
 
 
@@ -140,6 +170,30 @@
     
 
 
+    <!-- https://w3id.org/def/astrea#message -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#message">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#ReportEntry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Message associated to a report that provides information to the user, e.g. if an error is found.</rdfs:comment>
+        <rdfs:label>message</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/astrea#ontologySource -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#ontologySource">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#ReportEntry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Ontologies from which the shapes are generated</rdfs:comment>
+        <rdfs:label>ontology source</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/def/astrea#query -->
 
 
@@ -165,6 +219,18 @@
     
 
 
+    <!-- https://w3id.org/def/astrea#statusCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#statusCode">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#ReportEntry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>code that provides information about the generated ontologies, e.g., 200 to indicate that all the shapes were correctly generated.</rdfs:comment>
+        <rdfs:label>status code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -174,6 +240,17 @@
      -->
 
 
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#Shape -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/shacl#Shape">
+        <rdfs:comment>A shape is a collection of constraints that may be targeted for certain nodes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/shacl.ttl"/>
+        <rdfs:label>Shape</rdfs:label>
+    </owl:Class>
     
 
 
@@ -248,11 +325,45 @@
     
 
 
+    <!-- https://w3id.org/def/astrea#ReportEntry -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#ReportEntry">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#message"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#ontologySource"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#statusCode"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Entry of the report which indicates the status of the shapes generation for a given ontology.</rdfs:comment>
+        <rdfs:label>Report entry</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/def/astrea#SHACLConstruct -->
 
 
     <owl:Class rdf:about="https://w3id.org/def/astrea#SHACLConstruct">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/astrea#Construct"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#generates"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/shacl#Shape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Construct from SHACL language</rdfs:comment>
         <rdfs:label>SHACL construct</rdfs:label>
     </owl:Class>
@@ -267,10 +378,26 @@
         <rdfs:comment>Set of SHACL statements</rdfs:comment>
         <rdfs:label>SHACL pattern</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/astrea#ShapeReport -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#ShapeReport">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/shacl#Shape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Report generated from an ontology or a list of ontologies that includes the list of shapes</rdfs:comment>
+        <rdfs:label>Shape report</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
 
 
