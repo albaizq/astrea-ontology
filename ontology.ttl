@@ -7,14 +7,14 @@
 @base <https://w3id.org/def/astrea> .
 
 <https://w3id.org/def/astrea> rdf:type owl:Ontology ;
-                               <http://purl.org/dc/elements/1.1/title> "Astrea mappings ontology" ;
-                               <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ,
-                                                                  "Alba Fernández Izquierdo" ,
-                                                                  "Andrea Cimmino" ;
+                               <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ;
+                               owl:versionInfo "0.1.0" ;
+                               <http://purl.org/dc/terms/creator> "Andrea Cimmino" ;
                                <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "ast" ;
+                               <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" ;
                                rdfs:comment "This ontology  represents the mapping between components in different languages and how to obtain them" ;
-                               owl:versionInfo "0.0.2" .
+                               <http://purl.org/dc/elements/1.1/title> "Astrea mappings ontology" ;
+                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "astrea" .
 
 #################################################################
 #    Annotation properties
@@ -43,6 +43,24 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  https://w3id.org/def/astrea#contains
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:label "Relationship between a report and a shape included in it" ,
+                     "contains" .
+
+
+###  https://w3id.org/def/astrea#generates
+:generates rdf:type owl:ObjectProperty ;
+           rdfs:comment "Relationship between a construct and the shape it generates" ;
+           rdfs:label "generates" .
+
+
+###  https://w3id.org/def/astrea#generatesShapesFrom
+:generatesShapesFrom rdf:type owl:ObjectProperty ;
+                     rdfs:comment "Link between the report and its entries. Such entries includes the  ontologies from which the shapes are generated and the status of such generation. This link allows to keep track of potential errors that appear during the shapes generation." ;
+                     rdfs:label "generates shapes from" .
+
 
 ###  https://w3id.org/def/astrea#hasTarget
 :hasTarget rdf:type owl:ObjectProperty ;
@@ -79,12 +97,28 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
+###  https://w3id.org/def/astrea#message
+:message rdf:type owl:DatatypeProperty ;
+         rdfs:domain :ReportEntry ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Message associated to a report that provides information to the user, e.g. if an error is found." ;
+         rdfs:label "message" .
+
+
 ###  https://w3id.org/def/astrea#query
 :query rdf:type owl:DatatypeProperty ;
        rdfs:domain :MappingImplementation ;
        rdfs:range xsd:string ;
        rdfs:comment "query that allows to translate the source pattern and the target pattern" ;
        rdfs:label "query" .
+
+
+###  https://w3id.org/def/astrea#ontologySource
+:ontologySource rdf:type owl:DatatypeProperty ;
+        rdfs:domain :ReportEntry ;
+        rdfs:range rdfs:Literal ;
+        rdfs:comment "Ontologies from which the shapes are generated" ;
+        rdfs:label "ontology source" .
 
 
 ###  https://w3id.org/def/astrea#statement
@@ -96,9 +130,24 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
            rdfs:label "statement" .
 
 
+###  https://w3id.org/def/astrea#statusCode
+:statusCode rdf:type owl:DatatypeProperty ;
+            rdfs:domain :ReportEntry ;
+            rdfs:range xsd:integer ;
+            rdfs:comment "code that provides information about the generated ontologies, e.g., 200 to indicate that all the shapes were correctly generated." ;
+            rdfs:label "status code" .
+
+
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.w3.org/ns/shacl#Shape
+<http://www.w3.org/ns/shacl#Shape> rdf:type owl:Class ;
+                                   rdfs:comment "A shape is a collection of constraints that may be targeted for certain nodes." ;
+                                   rdfs:isDefinedBy <https://www.w3.org/ns/shacl.ttl> ;
+                                   rdfs:label "Shape" .
+
 
 ###  https://w3id.org/def/astrea#Construct
 :Construct rdf:type owl:Class ;
@@ -145,9 +194,31 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
          rdfs:label "Pattern" .
 
 
+###  https://w3id.org/def/astrea#ReportEntry
+:ReportEntry rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :message ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :ontologySource ;
+                               owl:someValuesFrom rdfs:Literal
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :statusCode ;
+                               owl:someValuesFrom xsd:integer
+                             ] ;
+             rdfs:comment "Entry of the report which indicates the status of the shapes generation for a given ontology." ;
+             rdfs:label "report entry" .
+
+
 ###  https://w3id.org/def/astrea#SHACLConstruct
 :SHACLConstruct rdf:type owl:Class ;
-                rdfs:subClassOf :Construct ;
+                rdfs:subClassOf :Construct ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :generates ;
+                                  owl:someValuesFrom <http://www.w3.org/ns/shacl#Shape>
+                                ] ;
                 rdfs:comment "Construct from SHACL language" ;
                 rdfs:label "SHACL construct" .
 
@@ -159,4 +230,14 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
               rdfs:label "SHACL pattern" .
 
 
-###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi
+###  https://w3id.org/def/astrea#ShapeReport
+:ShapeReport rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :contains ;
+                               owl:someValuesFrom <http://www.w3.org/ns/shacl#Shape>
+                             ] ;
+             rdfs:comment "Report generated from an ontology or a list of ontologies that includes the list of shapes" ;
+             rdfs:label "Shape report" .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
