@@ -197,7 +197,7 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/astrea#statusCode> .
 _:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
 <https://w3id.org/def/astrea#ReportEntry> <http://www.w3.org/2000/01/rdf-schema#comment> "Entry of the report which indicates the status of the shapes generation for a given ontology." .
-<https://w3id.org/def/astrea#ReportEntry> <http://www.w3.org/2000/01/rdf-schema#label> "report entry" .
+<https://w3id.org/def/astrea#ReportEntry> <http://www.w3.org/2000/01/rdf-schema#label> "Report entry" .
 # 
 # https://w3id.org/def/astrea#SHACLConstruct
 <https://w3id.org/def/astrea#SHACLConstruct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
