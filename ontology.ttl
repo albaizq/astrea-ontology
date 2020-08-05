@@ -11,8 +11,8 @@
                                owl:versionInfo "0.1.1" ;
                                <http://purl.org/dc/terms/creator> "Andrea Cimmino" ;
                                <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                               <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" ;
                                rdfs:comment "This ontology represents the mappings between SHACL and OWL and how to obtain them" ;
+                               <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" ;
                                <http://purl.org/dc/elements/1.1/title> "Astrea mappings ontology" ;
                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "astrea" .
 
@@ -105,20 +105,20 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
          rdfs:label "message" .
 
 
+###  https://w3id.org/def/astrea#ontologySource
+:ontologySource rdf:type owl:DatatypeProperty ;
+                rdfs:domain :ReportEntry ;
+                rdfs:range rdfs:Literal ;
+                rdfs:comment "Ontologies from which the shapes are generated" ;
+                rdfs:label "ontology source" .
+
+
 ###  https://w3id.org/def/astrea#query
 :query rdf:type owl:DatatypeProperty ;
        rdfs:domain :MappingImplementation ;
        rdfs:range xsd:string ;
        rdfs:comment "query that allows to translate the source pattern and the target pattern" ;
        rdfs:label "query" .
-
-
-###  https://w3id.org/def/astrea#ontologySource
-:ontologySource rdf:type owl:DatatypeProperty ;
-        rdfs:domain :ReportEntry ;
-        rdfs:range rdfs:Literal ;
-        rdfs:comment "Ontologies from which the shapes are generated" ;
-        rdfs:label "ontology source" .
 
 
 ###  https://w3id.org/def/astrea#statement
@@ -209,7 +209,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                                owl:someValuesFrom xsd:integer
                              ] ;
              rdfs:comment "Entry of the report which indicates the status of the shapes generation for a given ontology." ;
-             rdfs:label "report entry" .
+             rdfs:label "Report entry" .
 
 
 ###  https://w3id.org/def/astrea#SHACLConstruct
