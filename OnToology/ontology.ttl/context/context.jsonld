@@ -1,9 +1,5 @@
 {
   "@context" : {
-    "message" : {
-      "@id" : "https://w3id.org/def/astrea#message",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
@@ -22,10 +18,6 @@
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
-    "contains" : {
-      "@id" : "https://w3id.org/def/astrea#contains",
-      "@type" : "@id"
     },
     "query" : {
       "@id" : "https://w3id.org/def/astrea#query",
@@ -61,17 +53,6 @@
       "@id" : "https://w3id.org/def/astrea#hasTarget",
       "@type" : "@id"
     },
-    "statusCode" : {
-      "@id" : "https://w3id.org/def/astrea#statusCode",
-      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    "generates" : {
-      "@id" : "https://w3id.org/def/astrea#generates",
-      "@type" : "@id"
-    },
-    "ReportEntry" : {
-      "@id" : "https://w3id.org/def/astrea#ReportEntry"
-    },
     "preferredNamespacePrefix" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
     },
@@ -79,31 +60,14 @@
       "@id" : "https://w3id.org/def/astrea#statement",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
-    "isDefinedBy" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
-    },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
     "SHACLConstruct" : {
       "@id" : "https://w3id.org/def/astrea#SHACLConstruct"
     },
-    "ontologySource" : {
-      "@id" : "https://w3id.org/def/astrea#ontologySource",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
-    },
-    "generatesShapesFrom" : {
-      "@id" : "https://w3id.org/def/astrea#generatesShapesFrom",
-      "@type" : "@id"
-    },
-    "Shape" : {
-      "@id" : "http://www.w3.org/ns/shacl#Shape"
-    },
-    "ShapeReport" : {
-      "@id" : "https://w3id.org/def/astrea#ShapeReport"
     }
   }
 }
