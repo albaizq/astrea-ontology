@@ -4,9 +4,9 @@
 <https://w3id.org/def/astrea> <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" .
 <https://w3id.org/def/astrea> <http://purl.org/dc/terms/creator> "Andrea Cimmino" .
 <https://w3id.org/def/astrea> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
-<https://w3id.org/def/astrea> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ast" .
-<https://w3id.org/def/astrea> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology  represents the mapping between components in different languages and how to obtain them" .
-<https://w3id.org/def/astrea> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
+<https://w3id.org/def/astrea> <http://purl.org/vocab/vann/preferredNamespacePrefix> "astrea" .
+<https://w3id.org/def/astrea> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the mappings between SHACL and OWL and how to obtain them" .
+<https://w3id.org/def/astrea> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" .
 # 
 # 
 # #################################################################
@@ -39,6 +39,21 @@
 # #
 # #################################################################
 # 
+# 
+# https://w3id.org/def/astrea#contains
+<https://w3id.org/def/astrea#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/astrea#contains> <http://www.w3.org/2000/01/rdf-schema#label> "Relationship between a report and a shape included in it" .
+<https://w3id.org/def/astrea#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains" .
+# 
+# https://w3id.org/def/astrea#generates
+<https://w3id.org/def/astrea#generates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/astrea#generates> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a construct and the shape it generates" .
+<https://w3id.org/def/astrea#generates> <http://www.w3.org/2000/01/rdf-schema#label> "generates" .
+# 
+# https://w3id.org/def/astrea#generatesShapesFrom
+<https://w3id.org/def/astrea#generatesShapesFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/astrea#generatesShapesFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Link between the report and its entries. Such entries includes the  ontologies from which the shapes are generated and the status of such generation. This link allows to keep track of potential errors that appear during the shapes generation." .
+<https://w3id.org/def/astrea#generatesShapesFrom> <http://www.w3.org/2000/01/rdf-schema#label> "generates shapes from" .
 # 
 # https://w3id.org/def/astrea#hasTarget
 <https://w3id.org/def/astrea#hasTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -76,6 +91,20 @@
 # #################################################################
 # 
 # 
+# https://w3id.org/def/astrea#message
+<https://w3id.org/def/astrea#message> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/astrea#message> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/astrea#ReportEntry> .
+<https://w3id.org/def/astrea#message> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/astrea#message> <http://www.w3.org/2000/01/rdf-schema#comment> "Message associated to a report that provides information to the user, e.g. if an error is found." .
+<https://w3id.org/def/astrea#message> <http://www.w3.org/2000/01/rdf-schema#label> "message" .
+# 
+# https://w3id.org/def/astrea#ontologySource
+<https://w3id.org/def/astrea#ontologySource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/astrea#ontologySource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/astrea#ReportEntry> .
+<https://w3id.org/def/astrea#ontologySource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/astrea#ontologySource> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontologies from which the shapes are generated" .
+<https://w3id.org/def/astrea#ontologySource> <http://www.w3.org/2000/01/rdf-schema#label> "ontology source" .
+# 
 # https://w3id.org/def/astrea#query
 <https://w3id.org/def/astrea#query> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/astrea#query> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/astrea#MappingImplementation> .
@@ -91,6 +120,13 @@
 <https://w3id.org/def/astrea#statement> <http://www.w3.org/2000/01/rdf-schema#comment> "Statement included in the pattern" .
 <https://w3id.org/def/astrea#statement> <http://www.w3.org/2000/01/rdf-schema#label> "statement" .
 # 
+# https://w3id.org/def/astrea#statusCode
+<https://w3id.org/def/astrea#statusCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/astrea#statusCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/astrea#ReportEntry> .
+<https://w3id.org/def/astrea#statusCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/def/astrea#statusCode> <http://www.w3.org/2000/01/rdf-schema#comment> "code that provides information about the generated ontologies, e.g., 200 to indicate that all the shapes were correctly generated." .
+<https://w3id.org/def/astrea#statusCode> <http://www.w3.org/2000/01/rdf-schema#label> "status code" .
+# 
 # 
 # 
 # #################################################################
@@ -99,6 +135,12 @@
 # #
 # #################################################################
 # 
+# 
+# http://www.w3.org/ns/shacl#Shape
+<http://www.w3.org/ns/shacl#Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/shacl#Shape> <http://www.w3.org/2000/01/rdf-schema#comment> "A shape is a collection of constraints that may be targeted for certain nodes." .
+<http://www.w3.org/ns/shacl#Shape> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/shacl.ttl> .
+<http://www.w3.org/ns/shacl#Shape> <http://www.w3.org/2000/01/rdf-schema#label> "Shape" .
 # 
 # https://w3id.org/def/astrea#Construct
 <https://w3id.org/def/astrea#Construct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -140,9 +182,30 @@ _:genid3 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/astrea#Ma
 <https://w3id.org/def/astrea#Pattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of statments" .
 <https://w3id.org/def/astrea#Pattern> <http://www.w3.org/2000/01/rdf-schema#label> "Pattern" .
 # 
+# https://w3id.org/def/astrea#ReportEntry
+<https://w3id.org/def/astrea#ReportEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/astrea#ReportEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/astrea#message> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/astrea#ReportEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/astrea#ontologySource> .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/astrea#ReportEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/astrea#statusCode> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/def/astrea#ReportEntry> <http://www.w3.org/2000/01/rdf-schema#comment> "Entry of the report which indicates the status of the shapes generation for a given ontology." .
+<https://w3id.org/def/astrea#ReportEntry> <http://www.w3.org/2000/01/rdf-schema#label> "Report entry" .
+# 
 # https://w3id.org/def/astrea#SHACLConstruct
 <https://w3id.org/def/astrea#SHACLConstruct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/astrea#SHACLConstruct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/astrea#Construct> .
+<https://w3id.org/def/astrea#SHACLConstruct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/astrea#generates> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/shacl#Shape> .
 <https://w3id.org/def/astrea#SHACLConstruct> <http://www.w3.org/2000/01/rdf-schema#comment> "Construct from SHACL language" .
 <https://w3id.org/def/astrea#SHACLConstruct> <http://www.w3.org/2000/01/rdf-schema#label> "SHACL construct" .
 # 
@@ -152,4 +215,13 @@ _:genid3 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/astrea#Ma
 <https://w3id.org/def/astrea#SHACLPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of SHACL statements" .
 <https://w3id.org/def/astrea#SHACLPattern> <http://www.w3.org/2000/01/rdf-schema#label> "SHACL pattern" .
 # 
-# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
+# https://w3id.org/def/astrea#ShapeReport
+<https://w3id.org/def/astrea#ShapeReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/astrea#ShapeReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/astrea#contains> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/shacl#Shape> .
+<https://w3id.org/def/astrea#ShapeReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Report generated from an ontology or a list of ontologies that includes the list of shapes" .
+<https://w3id.org/def/astrea#ShapeReport> <http://www.w3.org/2000/01/rdf-schema#label> "Shape report" .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
