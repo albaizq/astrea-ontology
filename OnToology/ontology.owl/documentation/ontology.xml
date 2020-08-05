@@ -17,7 +17,7 @@
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <vann:preferredNamespacePrefix>ast</vann:preferredNamespacePrefix>
         <rdfs:comment>This ontology  represents the mapping between components in different languages and how to obtain them</rdfs:comment>
-        <owl:versionInfo>0.1.0</owl:versionInfo>
+        <owl:versionInfo>0.1.1</owl:versionInfo>
     </owl:Ontology>
     
 

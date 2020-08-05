@@ -71,7 +71,7 @@
     "@value" : "This ontology  represents the mapping between components in different languages and how to obtain them"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1.0"
+    "@value" : "0.1.1"
   } ]
 }, {
   "@id" : "https://w3id.org/def/astrea#Construct",

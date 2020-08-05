@@ -6,7 +6,7 @@
 <https://w3id.org/def/astrea> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <https://w3id.org/def/astrea> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ast" .
 <https://w3id.org/def/astrea> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology  represents the mapping between components in different languages and how to obtain them" .
-<https://w3id.org/def/astrea> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
+<https://w3id.org/def/astrea> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" .
 # 
 # 
 # #################################################################

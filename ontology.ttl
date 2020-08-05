@@ -8,7 +8,7 @@
 
 <https://w3id.org/def/astrea> rdf:type owl:Ontology ;
                                <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ;
-                               owl:versionInfo "0.1.0" ;
+                               owl:versionInfo "0.1.1" ;
                                <http://purl.org/dc/terms/creator> "Andrea Cimmino" ;
                                <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" ;

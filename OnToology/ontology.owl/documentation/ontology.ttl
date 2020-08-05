@@ -14,7 +14,7 @@
                                <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "ast" ;
                                rdfs:comment "This ontology  represents the mapping between components in different languages and how to obtain them" ;
-                               owl:versionInfo "0.1.0" .
+                               owl:versionInfo "0.1.1" .
 
 #################################################################
 #    Annotation properties
