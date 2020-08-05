@@ -1,0 +1,546 @@
+<h2 id="crossreference" class="list">Cross reference for Astrea mappings ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Astrea mappings ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Construct" title="https://w3id.org/def/astrea#Construct">Construct</a>
+      </li>
+      <li>
+         <a href="#MappingImplementation"
+            title="https://w3id.org/def/astrea#MappingImplementation">Mapping implementation</a>
+      </li>
+      <li>
+         <a href="#OntologyConstruct" title="https://w3id.org/def/astrea#OntologyConstruct">Ontology construct</a>
+      </li>
+      <li>
+         <a href="#OntologPattern" title="https://w3id.org/def/astrea#OntologPattern">Ontology pattern</a>
+      </li>
+      <li>
+         <a href="#Pattern" title="https://w3id.org/def/astrea#Pattern">Pattern</a>
+      </li>
+      <li>
+         <a href="#ReportEntry" title="https://w3id.org/def/astrea#ReportEntry">report entry</a>
+      </li>
+      <li>
+         <a href="#SHACLConstruct" title="https://w3id.org/def/astrea#SHACLConstruct">SHACL construct</a>
+      </li>
+      <li>
+         <a href="#SHACLPattern" title="https://w3id.org/def/astrea#SHACLPattern">SHACL pattern</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/shacl#Shape" title="http://www.w3.org/ns/shacl#Shape">Shape</a>
+      </li>
+      <li>
+         <a href="#ShapeReport" title="https://w3id.org/def/astrea#ShapeReport">Shape report</a>
+      </li>
+   </ul>
+   <div class="entity" id="Construct">
+      <h3>Construct<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#Construct</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#OntologyConstruct" title="https://w3id.org/def/astrea#OntologyConstruct">Ontology construct</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SHACLConstruct" title="https://w3id.org/def/astrea#SHACLConstruct">SHACL construct</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MappingImplementation">
+      <h3>Mapping implementation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#MappingImplementation</p>
+      <div class="comment">
+         <span class="markdown">Implementation of the mappings by means of a query that allows to translate a source pattern into a target pattern</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasTarget" title="https://w3id.org/def/astrea#hasTarget">has target</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#query" title="https://w3id.org/def/astrea#query">query</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isTranslatedBy" title="https://w3id.org/def/astrea#isTranslatedBy">is translated by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OntologyConstruct">
+      <h3>Ontology construct<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#OntologyConstruct</p>
+      <div class="comment">
+         <span class="markdown">Construct from OWL, RDF, RDFS or XSD language</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Construct" title="https://w3id.org/def/astrea#Construct">Construct</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OntologPattern">
+      <h3>Ontology pattern<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#OntologPattern</p>
+      <div class="comment">
+         <span class="markdown">Set of OWL or RDFS axioms</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Pattern" title="https://w3id.org/def/astrea#Pattern">Pattern</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Pattern">
+      <h3>Pattern<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#Pattern</p>
+      <div class="comment">
+         <span class="markdown">Set of statments</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#OntologPattern" title="https://w3id.org/def/astrea#OntologPattern">Ontology pattern</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SHACLPattern" title="https://w3id.org/def/astrea#SHACLPattern">SHACL pattern</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isMappedTo" title="https://w3id.org/def/astrea#isMappedTo">is mapped to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isTranslatedBy" title="https://w3id.org/def/astrea#isTranslatedBy">is translated by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#statement" title="https://w3id.org/def/astrea#statement">statement</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasTarget" title="https://w3id.org/def/astrea#hasTarget">has target</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isMappedTo" title="https://w3id.org/def/astrea#isMappedTo">is mapped to</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ReportEntry">
+      <h3>report entry<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#ReportEntry</p>
+      <div class="comment">
+         <span class="markdown">Entry of the report which indicates the status of the shapes generation for a given ontology.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#message" title="https://w3id.org/def/astrea#message">message</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#ontologySource" title="https://w3id.org/def/astrea#ontologySource">ontology source</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#statusCode" title="https://w3id.org/def/astrea#statusCode">status code</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SHACLConstruct">
+      <h3>SHACL construct<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#SHACLConstruct</p>
+      <div class="comment">
+         <span class="markdown">Construct from SHACL language</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Construct" title="https://w3id.org/def/astrea#Construct">Construct</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SHACLPattern">
+      <h3>SHACL pattern<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#SHACLPattern</p>
+      <div class="comment">
+         <span class="markdown">Set of SHACL statements</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Pattern" title="https://w3id.org/def/astrea#Pattern">Pattern</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/shacl#Shape">
+      <h3>Shape<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/shacl#Shape</p>
+      <div class="comment">
+         <span class="markdown">A shape is a collection of constraints that may be targeted for certain nodes.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.w3.org/ns/shacl.ttl">https://www.w3.org/ns/shacl.ttl</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ShapeReport">
+      <h3>Shape report<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#ShapeReport</p>
+      <div class="comment">
+         <span class="markdown">Report generated from an ontology or a list of ontologies that includes the list of shapes</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#generates" title="https://w3id.org/def/astrea#generates">generates</a>
+      </li>
+      <li>
+         <a href="#generatesShapesFrom" title="https://w3id.org/def/astrea#generatesShapesFrom">generates shapes from</a>
+      </li>
+      <li>
+         <a href="#hasTarget" title="https://w3id.org/def/astrea#hasTarget">has target</a>
+      </li>
+      <li>
+         <a href="#isMappedTo" title="https://w3id.org/def/astrea#isMappedTo">is mapped to</a>
+      </li>
+      <li>
+         <a href="#isTranslatedBy" title="https://w3id.org/def/astrea#isTranslatedBy">is translated by</a>
+      </li>
+      <li>
+         <a href="#involves" title="https://w3id.org/def/astrea#involves">Relation between a pattern an the elements that involves</a>
+      </li>
+      <li>
+         <a href="#contains" title="https://w3id.org/def/astrea#contains">Relationship between a report and a shape included in it</a>
+      </li>
+   </ul>
+   <div class="entity" id="generates">
+      <h3>generates<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#generates</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a construct and the shape it generates</span>
+      </div>
+   </div>
+   <div class="entity" id="generatesShapesFrom">
+      <h3>generates shapes from<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#generatesShapesFrom</p>
+      <div class="comment">
+         <span class="markdown">Link between the report and its entries. Such entries includes the  ontologies from which the shapes are generated and the status of such generation. This link allows to keep track of potential errors that appear during the shapes generation.</span>
+      </div>
+   </div>
+   <div class="entity" id="hasTarget">
+      <h3>has target<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#hasTarget</p>
+      <div class="comment">
+         <span class="markdown">Link between the mapping implementation and  the target pattern</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MappingImplementation"
+                  title="https://w3id.org/def/astrea#MappingImplementation">Mapping implementation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Pattern" title="https://w3id.org/def/astrea#Pattern">Pattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isMappedTo">
+      <h3>is mapped to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#isMappedTo</p>
+      <div class="comment">
+         <span class="markdown">Relation between two patterns that are mapped</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> symmetric</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Pattern" title="https://w3id.org/def/astrea#Pattern">Pattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Pattern" title="https://w3id.org/def/astrea#Pattern">Pattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isTranslatedBy">
+      <h3>is translated by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#isTranslatedBy</p>
+      <div class="comment">
+         <span class="markdown">Relation between a pattern and the mapping implementations that allows its translation</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Pattern" title="https://w3id.org/def/astrea#Pattern">Pattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#MappingImplementation"
+                  title="https://w3id.org/def/astrea#MappingImplementation">Mapping implementation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="involves">
+      <h3>Relation between a pattern an the elements that involves<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#involves</p>
+   </div>
+   <div class="entity" id="contains">
+      <h3>Relationship between a report and a shape included in it<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#contains</p>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#message" title="https://w3id.org/def/astrea#message">message</a>
+      </li>
+      <li>
+         <a href="#ontologySource" title="https://w3id.org/def/astrea#ontologySource">ontology source</a>
+      </li>
+      <li>
+         <a href="#query" title="https://w3id.org/def/astrea#query">query</a>
+      </li>
+      <li>
+         <a href="#statement" title="https://w3id.org/def/astrea#statement">statement</a>
+      </li>
+      <li>
+         <a href="#statusCode" title="https://w3id.org/def/astrea#statusCode">status code</a>
+      </li>
+   </ul>
+   <div class="entity" id="message">
+      <h3>message<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#message</p>
+      <div class="comment">
+         <span class="markdown">Message associated to a report that provides information to the user, e.g. if an error is found.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ReportEntry" title="https://w3id.org/def/astrea#ReportEntry">report entry</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="ontologySource">
+      <h3>ontology source<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#ontologySource</p>
+      <div class="comment">
+         <span class="markdown">Ontologies from which the shapes are generated</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ReportEntry" title="https://w3id.org/def/astrea#ReportEntry">report entry</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="query">
+      <h3>query<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#query</p>
+      <div class="comment">
+         <span class="markdown">query that allows to translate the source pattern and the target pattern</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MappingImplementation"
+                  title="https://w3id.org/def/astrea#MappingImplementation">Mapping implementation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="statement">
+      <h3>statement<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#statement</p>
+      <div class="comment">
+         <span class="markdown">Statement included in the pattern</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Pattern" title="https://w3id.org/def/astrea#Pattern">Pattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="statusCode">
+      <h3>status code<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#statusCode</p>
+      <div class="comment">
+         <span class="markdown">code that provides information about the generated ontologies, e.g., 200 to indicate that all the shapes were correctly generated.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ReportEntry" title="https://w3id.org/def/astrea#ReportEntry">report entry</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

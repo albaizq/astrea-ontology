@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/def/astrea#"
+     xml:base="https://w3id.org/def/astrea"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/def/astrea">
+        <dc:title>Astrea mappings ontology</dc:title>
+        <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
+        <terms:creator>Alba Fernández Izquierdo</terms:creator>
+        <terms:creator>Andrea Cimmino</terms:creator>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <vann:preferredNamespacePrefix>astrea</vann:preferredNamespacePrefix>
+        <rdfs:comment>This ontology represents the mappings between SHACL and OWL and how to obtain them</rdfs:comment>
+        <owl:versionInfo>0.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/astrea#contains -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#contains">
+        <rdfs:label>Relationship between a report and a shape included in it</rdfs:label>
+        <rdfs:label>contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/astrea#generates -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#generates">
+        <rdfs:comment>Relationship between a construct and the shape it generates</rdfs:comment>
+        <rdfs:label>generates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/astrea#generatesShapesFrom -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#generatesShapesFrom">
+        <rdfs:comment>Link between the report and its entries. Such entries includes the  ontologies from which the shapes are generated and the status of such generation. This link allows to keep track of potential errors that appear during the shapes generation.</rdfs:comment>
+        <rdfs:label>generates shapes from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/astrea#hasTarget -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#hasTarget">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#MappingImplementation"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/astrea#Pattern"/>
+        <rdfs:comment>Link between the mapping implementation and  the target pattern</rdfs:comment>
+        <rdfs:label>has target</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/astrea#involves -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#involves">
+        <rdfs:label>Relation between a pattern an the elements that involves</rdfs:label>
+        <rdfs:label>involves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/astrea#isMappedTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#isMappedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Pattern"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/astrea#Pattern"/>
+        <rdfs:comment>Relation between two patterns that are mapped</rdfs:comment>
+        <rdfs:label>is mapped to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/astrea#isTranslatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/astrea#isTranslatedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Pattern"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/astrea#MappingImplementation"/>
+        <rdfs:comment>Relation between a pattern and the mapping implementations that allows its translation</rdfs:comment>
+        <rdfs:label>is translated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/astrea#message -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#message">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#ReportEntry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Message associated to a report that provides information to the user, e.g. if an error is found.</rdfs:comment>
+        <rdfs:label>message</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/astrea#ontologySource -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#ontologySource">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#ReportEntry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Ontologies from which the shapes are generated</rdfs:comment>
+        <rdfs:label>ontology source</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/astrea#query -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#query">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#MappingImplementation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>query that allows to translate the source pattern and the target pattern</rdfs:comment>
+        <rdfs:label>query</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/astrea#statement -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#statement">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#Pattern"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Statement included in the pattern</rdfs:comment>
+        <rdfs:label>statement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/astrea#statusCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#statusCode">
+        <rdfs:domain rdf:resource="https://w3id.org/def/astrea#ReportEntry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>code that provides information about the generated ontologies, e.g., 200 to indicate that all the shapes were correctly generated.</rdfs:comment>
+        <rdfs:label>status code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#Shape -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/shacl#Shape">
+        <rdfs:comment>A shape is a collection of constraints that may be targeted for certain nodes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/shacl.ttl"/>
+        <rdfs:label>Shape</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/astrea#Construct -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#Construct">
+        <rdfs:label>Construct</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/astrea#MappingImplementation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#MappingImplementation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/astrea#Pattern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Implementation of the mappings by means of a query that allows to translate a source pattern into a target pattern</rdfs:comment>
+        <rdfs:label>Mapping implementation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/astrea#OntologPattern -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#OntologPattern">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/astrea#Pattern"/>
+        <rdfs:comment>Set of OWL or RDFS axioms</rdfs:comment>
+        <rdfs:label>Ontology pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/astrea#OntologyConstruct -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#OntologyConstruct">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/astrea#Construct"/>
+        <rdfs:comment>Construct from OWL, RDF, RDFS or XSD language</rdfs:comment>
+        <rdfs:label>Ontology construct</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/astrea#Pattern -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#Pattern">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#involves"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/astrea#Construct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#isTranslatedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/astrea#MappingImplementation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Set of statments</rdfs:comment>
+        <rdfs:label>Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/astrea#ReportEntry -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#ReportEntry">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#message"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#ontologySource"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#statusCode"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Entry of the report which indicates the status of the shapes generation for a given ontology.</rdfs:comment>
+        <rdfs:label>report entry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/astrea#SHACLConstruct -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#SHACLConstruct">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/astrea#Construct"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#generates"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/shacl#Shape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Construct from SHACL language</rdfs:comment>
+        <rdfs:label>SHACL construct</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/astrea#SHACLPattern -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#SHACLPattern">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/astrea#Pattern"/>
+        <rdfs:comment>Set of SHACL statements</rdfs:comment>
+        <rdfs:label>SHACL pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/astrea#ShapeReport -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#ShapeReport">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/shacl#Shape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Report generated from an ontology or a list of ontologies that includes the list of shapes</rdfs:comment>
+        <rdfs:label>Shape report</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+
