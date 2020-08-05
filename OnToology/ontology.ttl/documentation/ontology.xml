@@ -348,7 +348,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Entry of the report which indicates the status of the shapes generation for a given ontology.</rdfs:comment>
-        <rdfs:label>report entry</rdfs:label>
+        <rdfs:label>Report entry</rdfs:label>
     </owl:Class>
     
 

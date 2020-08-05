@@ -209,7 +209,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                                owl:someValuesFrom xsd:integer
                              ] ;
              rdfs:comment "Entry of the report which indicates the status of the shapes generation for a given ontology." ;
-             rdfs:label "report entry" .
+             rdfs:label "Report entry" .
 
 
 ###  https://w3id.org/def/astrea#SHACLConstruct

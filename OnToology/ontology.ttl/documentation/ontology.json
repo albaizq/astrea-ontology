@@ -193,7 +193,7 @@
     "@value" : "Entry of the report which indicates the status of the shapes generation for a given ontology."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "report entry"
+    "@value" : "Report entry"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid4"
