@@ -12,8 +12,8 @@ node [shape = rectangle, color="orange"]; "base:ReportEntry" "base:Construct" "h
 	"NULL" -> "base:statusCode" [ label = "owl:onProperty" ];
 	"NULL" -> "base:contains" [ label = "owl:onProperty" ];
 	"NULL" -> "base:Pattern" [ label = "owl:onClass" ];
-	"NULL" -> "http://www.w3.org/ns/shacl#Shape" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:isTranslatedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "http://www.w3.org/ns/shacl#Shape" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:message" [ label = "owl:onProperty" ];
 	"NULL" -> "rdfs:Literal" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:generates" [ label = "owl:onProperty" ];
