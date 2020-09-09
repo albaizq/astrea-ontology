@@ -8,7 +8,7 @@
 
 <https://w3id.org/def/astrea> rdf:type owl:Ontology ;
                                <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ;
-                               owl:versionInfo "0.1.1" ;
+                               owl:versionInfo "0.2.0" ;
                                <http://purl.org/dc/terms/creator> "Andrea Cimmino" ;
                                <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                rdfs:comment "This ontology represents the mappings between SHACL and OWL and how to obtain them" ;
@@ -43,6 +43,30 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://www.w3.org/ns/shacl#resultSeverity
+<http://www.w3.org/ns/shacl#resultSeverity> rdf:type owl:ObjectProperty ;
+                                            rdfs:range <http://www.w3.org/ns/shacl#Severity> ;
+                                            rdfs:comment "The severity of the result, e.g. warning." ;
+                                            rdfs:isDefinedBy "https://www.w3.org/ns/shacl.ttl" ;
+                                            rdfs:label "result severity" .
+
+
+###  http://www.w3.org/ns/shacl#result
+<http://www.w3.org/ns/shacl#result> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <http://www.w3.org/ns/shacl#ValidationReport> ;
+                                     rdfs:range <http://www.w3.org/ns/shacl#ValidationResult> ;
+                                     rdfs:comment "The validation results contained in a validation report." ;
+                                     rdfs:isDefinedBy "https://www.w3.org/ns/shacl.ttl" ;
+                                     rdfs:label "result" .
+
+
+###  http://www.w3.org/ns/shacl#sourceConstraintComponent
+<http://www.w3.org/ns/shacl#sourceConstraintComponent> rdf:type owl:ObjectProperty ;
+                                                       rdfs:comment "The constraint component that is the source of the result." ;
+                                                       rdfs:isDefinedBy "https://www.w3.org/ns/shacl.ttl" ;
+                                                       rdfs:label "source constraint component" .
+
 
 ###  https://w3id.org/def/astrea#contains
 :contains rdf:type owl:ObjectProperty ;
@@ -97,6 +121,20 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
+###  https://w3id.org/def/astrea#covers
+:covers rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:anyURI ;
+        rdfs:comment "Term that is covered by the shape report" ;
+        rdfs:label "covers" .
+
+
+###  https://w3id.org/def/astrea#isAbsentTerm
+:isAbsentTerm rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:anyURI ;
+              rdfs:comment "Term that is not covered by the shape report" ;
+              rdfs:label "is absent term" .
+
+
 ###  https://w3id.org/def/astrea#message
 :message rdf:type owl:DatatypeProperty ;
          rdfs:domain :ReportEntry ;
@@ -142,11 +180,39 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
+###  http://www.w3.org/ns/shacl#PatternConstraintsComponent
+<http://www.w3.org/ns/shacl#PatternConstraintsComponent> rdf:type owl:Class ;
+                                                         rdfs:comment "A constraint component that can be used to verify that every value node matches a given regular expression." ;
+                                                         rdfs:isDefinedBy "https://www.w3.org/ns/shacl.ttl" ;
+                                                         rdfs:label "Pattern constraint component" .
+
+
+###  http://www.w3.org/ns/shacl#Severity
+<http://www.w3.org/ns/shacl#Severity> rdf:type owl:Class ;
+                                      rdfs:comment "The class of validation result severity levels, including violation and warning levels." ;
+                                      rdfs:isDefinedBy "https://www.w3.org/ns/shacl.ttl" ;
+                                      rdfs:label "Severity" .
+
+
 ###  http://www.w3.org/ns/shacl#Shape
 <http://www.w3.org/ns/shacl#Shape> rdf:type owl:Class ;
                                    rdfs:comment "A shape is a collection of constraints that may be targeted for certain nodes." ;
                                    rdfs:isDefinedBy <https://www.w3.org/ns/shacl.ttl> ;
                                    rdfs:label "Shape" .
+
+
+###  http://www.w3.org/ns/shacl#ValidationReport
+<http://www.w3.org/ns/shacl#ValidationReport> rdf:type owl:Class ;
+                                              rdfs:comment "The class of SHACL validation reports." ;
+                                              rdfs:isDefinedBy <https://www.w3.org/ns/shacl.ttl> ;
+                                              rdfs:label "Validation report" .
+
+
+###  http://www.w3.org/ns/shacl#ValidationResult
+<http://www.w3.org/ns/shacl#ValidationResult> rdf:type owl:Class ;
+                                              rdfs:comment "The class of validation results." ;
+                                              rdfs:isDefinedBy "https://www.w3.org/ns/shacl.ttl" ;
+                                              rdfs:label "Validation result" .
 
 
 ###  https://w3id.org/def/astrea#Construct
@@ -238,6 +304,21 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                              ] ;
              rdfs:comment "Report generated from an ontology or a list of ontologies that includes the list of shapes" ;
              rdfs:label "Shape report" .
+
+
+###  https://w3id.org/def/astrea#ValidationReport
+:ValidationReport rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/shacl#ValidationReport> ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :covers ;
+                                    owl:someValuesFrom xsd:anyURI
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :isAbsentTerm ;
+                                    owl:someValuesFrom xsd:anyURI
+                                  ] ;
+                  rdfs:comment "Report that provides information related to the performed validation" ;
+                  rdfs:label "Astrea Validation Report" .
 
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
