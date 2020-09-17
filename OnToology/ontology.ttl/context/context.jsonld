@@ -1,0 +1,141 @@
+{
+  "@context" : {
+    "Severity" : {
+      "@id" : "http://www.w3.org/ns/shacl#Severity"
+    },
+    "message" : {
+      "@id" : "https://w3id.org/def/astrea#message",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sourceConstraintComponent" : {
+      "@id" : "http://www.w3.org/ns/shacl#sourceConstraintComponent",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "MappingImplementation" : {
+      "@id" : "https://w3id.org/def/astrea#MappingImplementation"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "ValidationResult" : {
+      "@id" : "http://www.w3.org/ns/shacl#ValidationResult"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "resultSeverity" : {
+      "@id" : "http://www.w3.org/ns/shacl#resultSeverity",
+      "@type" : "@id"
+    },
+    "isMappedTo" : {
+      "@id" : "https://w3id.org/def/astrea#isMappedTo",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "contains" : {
+      "@id" : "https://w3id.org/def/astrea#contains",
+      "@type" : "@id"
+    },
+    "query" : {
+      "@id" : "https://w3id.org/def/astrea#query",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Construct" : {
+      "@id" : "https://w3id.org/def/astrea#Construct"
+    },
+    "SHACLPattern" : {
+      "@id" : "https://w3id.org/def/astrea#SHACLPattern"
+    },
+    "involves" : {
+      "@id" : "https://w3id.org/def/astrea#involves",
+      "@type" : "@id"
+    },
+    "isTranslatedBy" : {
+      "@id" : "https://w3id.org/def/astrea#isTranslatedBy",
+      "@type" : "@id"
+    },
+    "Pattern" : {
+      "@id" : "https://w3id.org/def/astrea#Pattern"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "OntologyConstruct" : {
+      "@id" : "https://w3id.org/def/astrea#OntologyConstruct"
+    },
+    "OntologPattern" : {
+      "@id" : "https://w3id.org/def/astrea#OntologPattern"
+    },
+    "ValidationReport" : {
+      "@id" : "http://www.w3.org/ns/shacl#ValidationReport"
+    },
+    "hasTarget" : {
+      "@id" : "https://w3id.org/def/astrea#hasTarget",
+      "@type" : "@id"
+    },
+    "statusCode" : {
+      "@id" : "https://w3id.org/def/astrea#statusCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "covers" : {
+      "@id" : "https://w3id.org/def/astrea#covers",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "PatternConstraintsComponent" : {
+      "@id" : "http://www.w3.org/ns/shacl#PatternConstraintsComponent"
+    },
+    "generates" : {
+      "@id" : "https://w3id.org/def/astrea#generates",
+      "@type" : "@id"
+    },
+    "ReportEntry" : {
+      "@id" : "https://w3id.org/def/astrea#ReportEntry"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "statement" : {
+      "@id" : "https://w3id.org/def/astrea#statement",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "isAbsentTerm" : {
+      "@id" : "https://w3id.org/def/astrea#isAbsentTerm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "SHACLConstruct" : {
+      "@id" : "https://w3id.org/def/astrea#SHACLConstruct"
+    },
+    "ontologySource" : {
+      "@id" : "https://w3id.org/def/astrea#ontologySource",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "generatesShapesFrom" : {
+      "@id" : "https://w3id.org/def/astrea#generatesShapesFrom",
+      "@type" : "@id"
+    },
+    "Shape" : {
+      "@id" : "http://www.w3.org/ns/shacl#Shape"
+    },
+    "result" : {
+      "@id" : "http://www.w3.org/ns/shacl#result",
+      "@type" : "@id"
+    },
+    "ShapeReport" : {
+      "@id" : "https://w3id.org/def/astrea#ShapeReport"
+    }
+  }
+}
