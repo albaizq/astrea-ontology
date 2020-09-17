@@ -1,7 +1,8 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "base:Construct" "base:OntologPattern" "base:Pattern" "base:SHACLPattern" "base:SHACLConstruct" "base:OntologyConstruct" ; /*classes style*/
+node [shape = rectangle, color="black"]; "base:ValidationReport" "base:Construct" "base:OntologPattern" "http://www.w3.org/ns/shacl#ValidationReport" "base:Pattern" "base:SHACLPattern" "base:SHACLConstruct" "base:OntologyConstruct" ; /*classes style*/
+	"base:ValidationReport" -> "http://www.w3.org/ns/shacl#ValidationReport" [ label = "rdfs:subClassOf" ];
 	"base:OntologyConstruct" -> "base:Construct" [ label = "rdfs:subClassOf" ];
 	"base:OntologPattern" -> "base:Pattern" [ label = "rdfs:subClassOf" ];
 	"base:SHACLPattern" -> "base:Pattern" [ label = "rdfs:subClassOf" ];

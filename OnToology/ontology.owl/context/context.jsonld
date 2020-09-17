@@ -1,8 +1,15 @@
 {
   "@context" : {
+    "Severity" : {
+      "@id" : "http://www.w3.org/ns/shacl#Severity"
+    },
     "message" : {
       "@id" : "https://w3id.org/def/astrea#message",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sourceConstraintComponent" : {
+      "@id" : "http://www.w3.org/ns/shacl#sourceConstraintComponent",
+      "@type" : "@id"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
@@ -13,8 +20,15 @@
     "license" : {
       "@id" : "http://purl.org/dc/terms/license"
     },
+    "ValidationResult" : {
+      "@id" : "http://www.w3.org/ns/shacl#ValidationResult"
+    },
     "topDataProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "resultSeverity" : {
+      "@id" : "http://www.w3.org/ns/shacl#resultSeverity",
+      "@type" : "@id"
     },
     "isMappedTo" : {
       "@id" : "https://w3id.org/def/astrea#isMappedTo",
@@ -57,6 +71,9 @@
     "OntologPattern" : {
       "@id" : "https://w3id.org/def/astrea#OntologPattern"
     },
+    "ValidationReport" : {
+      "@id" : "http://www.w3.org/ns/shacl#ValidationReport"
+    },
     "hasTarget" : {
       "@id" : "https://w3id.org/def/astrea#hasTarget",
       "@type" : "@id"
@@ -64,6 +81,13 @@
     "statusCode" : {
       "@id" : "https://w3id.org/def/astrea#statusCode",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "covers" : {
+      "@id" : "https://w3id.org/def/astrea#covers",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "PatternConstraintsComponent" : {
+      "@id" : "http://www.w3.org/ns/shacl#PatternConstraintsComponent"
     },
     "generates" : {
       "@id" : "https://w3id.org/def/astrea#generates",
@@ -81,6 +105,10 @@
     },
     "isDefinedBy" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "isAbsentTerm" : {
+      "@id" : "https://w3id.org/def/astrea#isAbsentTerm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
@@ -101,6 +129,10 @@
     },
     "Shape" : {
       "@id" : "http://www.w3.org/ns/shacl#Shape"
+    },
+    "result" : {
+      "@id" : "http://www.w3.org/ns/shacl#result",
+      "@type" : "@id"
     },
     "ShapeReport" : {
       "@id" : "https://w3id.org/def/astrea#ShapeReport"
