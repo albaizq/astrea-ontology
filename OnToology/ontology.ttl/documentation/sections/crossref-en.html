@@ -4,6 +4,9 @@ This section provides details for each class and property defined by Astrea mapp
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#ValidationReport" title="https://w3id.org/def/astrea#ValidationReport">Astrea Validation Report</a>
+      </li>
+      <li>
          <a href="#Construct" title="https://w3id.org/def/astrea#Construct">Construct</a>
       </li>
       <li>
@@ -20,7 +23,14 @@ This section provides details for each class and property defined by Astrea mapp
          <a href="#Pattern" title="https://w3id.org/def/astrea#Pattern">Pattern</a>
       </li>
       <li>
+         <a href="#http://www.w3.org/ns/shacl#PatternConstraintsComponent"
+            title="http://www.w3.org/ns/shacl#PatternConstraintsComponent">Pattern constraint component</a>
+      </li>
+      <li>
          <a href="#ReportEntry" title="https://w3id.org/def/astrea#ReportEntry">Report entry</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/shacl#Severity" title="http://www.w3.org/ns/shacl#Severity">Severity</a>
       </li>
       <li>
          <a href="#SHACLConstruct" title="https://w3id.org/def/astrea#SHACLConstruct">SHACL construct</a>
@@ -34,7 +44,31 @@ This section provides details for each class and property defined by Astrea mapp
       <li>
          <a href="#ShapeReport" title="https://w3id.org/def/astrea#ShapeReport">Shape report</a>
       </li>
+      <li>
+         <a href="#http://www.w3.org/ns/shacl#ValidationReport" title="http://www.w3.org/ns/shacl#ValidationReport">Validation report</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/shacl#ValidationResult" title="http://www.w3.org/ns/shacl#ValidationResult">Validation result</a>
+      </li>
    </ul>
+   <div class="entity" id="ValidationReport">
+      <h3>Astrea Validation Report<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#ValidationReport</p>
+      <div class="comment">
+         <span class="markdown">Report that provides information related to the performed validation</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/shacl#ValidationReport" title="http://www.w3.org/ns/shacl#ValidationReport">Validation report</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Construct">
       <h3>Construct<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -147,6 +181,21 @@ This section provides details for each class and property defined by Astrea mapp
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://www.w3.org/ns/shacl#PatternConstraintsComponent">
+      <h3>Pattern constraint component<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/shacl#PatternConstraintsComponent</p>
+      <div class="comment">
+         <span class="markdown">A constraint component that can be used to verify that every value node matches a given regular expression.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/astrea</dd>
+      </dl>
+   </div>
    <div class="entity" id="ReportEntry">
       <h3>Report entry<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -166,6 +215,28 @@ This section provides details for each class and property defined by Astrea mapp
             <sup class="type-dp" title="data property">dp</sup>, <a href="#ontologySource" title="https://w3id.org/def/astrea#ontologySource">ontology source</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#statusCode" title="https://w3id.org/def/astrea#statusCode">status code</a>
             <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/shacl#Severity">
+      <h3>Severity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/shacl#Severity</p>
+      <div class="comment">
+         <span class="markdown">The class of validation result severity levels, including violation and warning levels.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/astrea</dd>
+      </dl>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/shacl#resultSeverity" title="http://www.w3.org/ns/shacl#resultSeverity">result severity</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -237,6 +308,57 @@ This section provides details for each class and property defined by Astrea mapp
          <dd/>
       </dl>
    </div>
+   <div class="entity" id="http://www.w3.org/ns/shacl#ValidationReport">
+      <h3>Validation report<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/shacl#ValidationReport</p>
+      <div class="comment">
+         <span class="markdown">The class of SHACL validation reports.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.w3.org/ns/shacl.ttl">https://www.w3.org/ns/shacl.ttl</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ValidationReport" title="https://w3id.org/def/astrea#ValidationReport">Astrea Validation Report</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/shacl#result" title="http://www.w3.org/ns/shacl#result">result</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/shacl#ValidationResult">
+      <h3>Validation result<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/shacl#ValidationResult</p>
+      <div class="comment">
+         <span class="markdown">The class of validation results.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/astrea</dd>
+      </dl>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/shacl#result" title="http://www.w3.org/ns/shacl#result">result</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
 </div><div id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
@@ -260,6 +382,16 @@ This section provides details for each class and property defined by Astrea mapp
       </li>
       <li>
          <a href="#contains" title="https://w3id.org/def/astrea#contains">Relationship between a report and a shape included in it</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/shacl#result" title="http://www.w3.org/ns/shacl#result">result</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/shacl#resultSeverity" title="http://www.w3.org/ns/shacl#resultSeverity">result severity</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/shacl#sourceConstraintComponent"
+            title="http://www.w3.org/ns/shacl#sourceConstraintComponent">source constraint component</a>
       </li>
    </ul>
    <div class="entity" id="generates">
@@ -379,9 +511,83 @@ This section provides details for each class and property defined by Astrea mapp
       <p>
          <strong>IRI:</strong> https://w3id.org/def/astrea#contains</p>
    </div>
+   <div class="entity" id="http://www.w3.org/ns/shacl#result">
+      <h3>result<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/shacl#result</p>
+      <div class="comment">
+         <span class="markdown">The validation results contained in a validation report.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/astrea</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/shacl#ValidationReport" title="http://www.w3.org/ns/shacl#ValidationReport">Validation report</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/shacl#ValidationResult" title="http://www.w3.org/ns/shacl#ValidationResult">Validation result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/shacl#resultSeverity">
+      <h3>result severity<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/shacl#resultSeverity</p>
+      <div class="comment">
+         <span class="markdown">The severity of the result, e.g. warning.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/astrea</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/shacl#Severity" title="http://www.w3.org/ns/shacl#Severity">Severity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/shacl#sourceConstraintComponent">
+      <h3>source constraint component<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/shacl#sourceConstraintComponent</p>
+      <div class="comment">
+         <span class="markdown">The constraint component that is the source of the result.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/astrea</dd>
+      </dl>
+   </div>
 </div><div id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
+      <li>
+         <a href="#covers" title="https://w3id.org/def/astrea#covers">covers</a>
+      </li>
+      <li>
+         <a href="#isAbsentTerm" title="https://w3id.org/def/astrea#isAbsentTerm">is absent term</a>
+      </li>
       <li>
          <a href="#message" title="https://w3id.org/def/astrea#message">message</a>
       </li>
@@ -398,6 +604,48 @@ This section provides details for each class and property defined by Astrea mapp
          <a href="#statusCode" title="https://w3id.org/def/astrea#statusCode">status code</a>
       </li>
    </ul>
+   <div class="entity" id="covers">
+      <h3>covers<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#covers</p>
+      <div class="comment">
+         <span class="markdown">Term that is covered by the shape report</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isAbsentTerm">
+      <h3>is absent term<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/astrea#isAbsentTerm</p>
+      <div class="comment">
+         <span class="markdown">Term that is not covered by the shape report</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="message">
       <h3>message<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>

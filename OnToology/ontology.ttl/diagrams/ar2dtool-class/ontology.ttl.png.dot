@@ -1,29 +1,36 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "base:ReportEntry" "base:Construct" "http://www.w3.org/ns/shacl#Shape" "base:Pattern" "base:MappingImplementation" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "base:ReportEntry" "http://www.w3.org/ns/shacl#Severity" "base:Construct" "http://www.w3.org/ns/shacl#Shape" "http://www.w3.org/ns/shacl#ValidationReport" "base:Pattern" "http://www.w3.org/ns/shacl#ValidationResult" "base:MappingImplementation" ; /*classes style*/
 	"https://w3id.org/def/astrea" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
 	"https://w3id.org/def/astrea" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
 	"base:statement" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
 	"NULL" -> "xsd:integer" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "xsd:string" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:Construct" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:isAbsentTerm" [ label = "owl:onProperty" ];
 	"NULL" -> "base:involves" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:anyURI" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:statusCode" [ label = "owl:onProperty" ];
 	"NULL" -> "base:contains" [ label = "owl:onProperty" ];
 	"NULL" -> "base:Pattern" [ label = "owl:onClass" ];
-	"NULL" -> "base:isTranslatedBy" [ label = "owl:onProperty" ];
 	"NULL" -> "http://www.w3.org/ns/shacl#Shape" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:isTranslatedBy" [ label = "owl:onProperty" ];
 	"NULL" -> "base:message" [ label = "owl:onProperty" ];
 	"NULL" -> "rdfs:Literal" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:generates" [ label = "owl:onProperty" ];
 	"NULL" -> "base:ontologySource" [ label = "owl:onProperty" ];
 	"NULL" -> "base:MappingImplementation" [ label = "owl:onClass" ];
+	"NULL" -> "base:covers" [ label = "owl:onProperty" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "base:covers" ];
 	"base:ReportEntry" -> "xsd:integer" [ label = "base:statusCode" ];
 	"base:Pattern" -> "xsd:string" [ label = "base:statement" ];
 	"base:ReportEntry" -> "xsd:string" [ label = "base:message" ];
 	"base:ReportEntry" -> "rdfs:Literal" [ label = "base:ontologySource" ];
 	"base:Pattern" -> "base:Pattern" [ label = "base:isMappedTo" ];
+	"owl:Thing" -> "http://www.w3.org/ns/shacl#Severity" [ label = "http://www.w3.org/ns/shacl#resultSeverity" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "base:isAbsentTerm" ];
+	"http://www.w3.org/ns/shacl#ValidationReport" -> "http://www.w3.org/ns/shacl#ValidationResult" [ label = "http://www.w3.org/ns/shacl#result" ];
 	"base:Pattern" -> "base:MappingImplementation" [ label = "base:isTranslatedBy" ];
 	"base:MappingImplementation" -> "xsd:string" [ label = "base:query" ];
 	"base:MappingImplementation" -> "base:Pattern" [ label = "base:hasTarget" ];

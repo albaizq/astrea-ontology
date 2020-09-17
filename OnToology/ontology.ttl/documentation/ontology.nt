@@ -6,7 +6,7 @@
 <https://w3id.org/def/astrea> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <https://w3id.org/def/astrea> <http://purl.org/vocab/vann/preferredNamespacePrefix> "astrea" .
 <https://w3id.org/def/astrea> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the mappings between SHACL and OWL and how to obtain them" .
-<https://w3id.org/def/astrea> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" .
+<https://w3id.org/def/astrea> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" .
 # 
 # 
 # #################################################################
@@ -39,6 +39,27 @@
 # #
 # #################################################################
 # 
+# 
+# http://www.w3.org/ns/shacl#result
+<http://www.w3.org/ns/shacl#result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/shacl#result> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/shacl#ValidationReport> .
+<http://www.w3.org/ns/shacl#result> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/shacl#ValidationResult> .
+<http://www.w3.org/ns/shacl#result> <http://www.w3.org/2000/01/rdf-schema#comment> "The validation results contained in a validation report." .
+<http://www.w3.org/ns/shacl#result> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.w3.org/ns/shacl.ttl" .
+<http://www.w3.org/ns/shacl#result> <http://www.w3.org/2000/01/rdf-schema#label> "result" .
+# 
+# http://www.w3.org/ns/shacl#resultSeverity
+<http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/shacl#Severity> .
+<http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/2000/01/rdf-schema#comment> "The severity of the result, e.g. warning." .
+<http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.w3.org/ns/shacl.ttl" .
+<http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/2000/01/rdf-schema#label> "result severity" .
+# 
+# http://www.w3.org/ns/shacl#sourceConstraintComponent
+<http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "The constraint component that is the source of the result." .
+<http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.w3.org/ns/shacl.ttl" .
+<http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/2000/01/rdf-schema#label> "source constraint component" .
 # 
 # https://w3id.org/def/astrea#contains
 <https://w3id.org/def/astrea#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -91,6 +112,18 @@
 # #################################################################
 # 
 # 
+# https://w3id.org/def/astrea#covers
+<https://w3id.org/def/astrea#covers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/astrea#covers> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/astrea#covers> <http://www.w3.org/2000/01/rdf-schema#comment> "Term that is covered by the shape report" .
+<https://w3id.org/def/astrea#covers> <http://www.w3.org/2000/01/rdf-schema#label> "covers" .
+# 
+# https://w3id.org/def/astrea#isAbsentTerm
+<https://w3id.org/def/astrea#isAbsentTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/astrea#isAbsentTerm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/astrea#isAbsentTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Term that is not covered by the shape report" .
+<https://w3id.org/def/astrea#isAbsentTerm> <http://www.w3.org/2000/01/rdf-schema#label> "is absent term" .
+# 
 # https://w3id.org/def/astrea#message
 <https://w3id.org/def/astrea#message> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/astrea#message> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/astrea#ReportEntry> .
@@ -136,11 +169,35 @@
 # #################################################################
 # 
 # 
+# http://www.w3.org/ns/shacl#PatternConstraintsComponent
+<http://www.w3.org/ns/shacl#PatternConstraintsComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/shacl#PatternConstraintsComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A constraint component that can be used to verify that every value node matches a given regular expression." .
+<http://www.w3.org/ns/shacl#PatternConstraintsComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.w3.org/ns/shacl.ttl" .
+<http://www.w3.org/ns/shacl#PatternConstraintsComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Pattern constraint component" .
+# 
+# http://www.w3.org/ns/shacl#Severity
+<http://www.w3.org/ns/shacl#Severity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/shacl#Severity> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of validation result severity levels, including violation and warning levels." .
+<http://www.w3.org/ns/shacl#Severity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.w3.org/ns/shacl.ttl" .
+<http://www.w3.org/ns/shacl#Severity> <http://www.w3.org/2000/01/rdf-schema#label> "Severity" .
+# 
 # http://www.w3.org/ns/shacl#Shape
 <http://www.w3.org/ns/shacl#Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/shacl#Shape> <http://www.w3.org/2000/01/rdf-schema#comment> "A shape is a collection of constraints that may be targeted for certain nodes." .
 <http://www.w3.org/ns/shacl#Shape> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/shacl.ttl> .
 <http://www.w3.org/ns/shacl#Shape> <http://www.w3.org/2000/01/rdf-schema#label> "Shape" .
+# 
+# http://www.w3.org/ns/shacl#ValidationReport
+<http://www.w3.org/ns/shacl#ValidationReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/shacl#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of SHACL validation reports." .
+<http://www.w3.org/ns/shacl#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/shacl.ttl> .
+<http://www.w3.org/ns/shacl#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#label> "Validation report" .
+# 
+# http://www.w3.org/ns/shacl#ValidationResult
+<http://www.w3.org/ns/shacl#ValidationResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/shacl#ValidationResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of validation results." .
+<http://www.w3.org/ns/shacl#ValidationResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.w3.org/ns/shacl.ttl" .
+<http://www.w3.org/ns/shacl#ValidationResult> <http://www.w3.org/2000/01/rdf-schema#label> "Validation result" .
 # 
 # https://w3id.org/def/astrea#Construct
 <https://w3id.org/def/astrea#Construct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -223,5 +280,19 @@ _:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/astrea
 _:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/shacl#Shape> .
 <https://w3id.org/def/astrea#ShapeReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Report generated from an ontology or a list of ontologies that includes the list of shapes" .
 <https://w3id.org/def/astrea#ShapeReport> <http://www.w3.org/2000/01/rdf-schema#label> "Shape report" .
+# 
+# https://w3id.org/def/astrea#ValidationReport
+<https://w3id.org/def/astrea#ValidationReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/astrea#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/shacl#ValidationReport> .
+<https://w3id.org/def/astrea#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/astrea#covers> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/astrea#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/astrea#isAbsentTerm> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/astrea#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Report that provides information related to the performed validation" .
+<https://w3id.org/def/astrea#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#label> "Astrea Validation Report" .
 # 
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

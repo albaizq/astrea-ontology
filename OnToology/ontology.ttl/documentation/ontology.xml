@@ -17,7 +17,7 @@
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <vann:preferredNamespacePrefix>astrea</vann:preferredNamespacePrefix>
         <rdfs:comment>This ontology represents the mappings between SHACL and OWL and how to obtain them</rdfs:comment>
-        <owl:versionInfo>0.1.1</owl:versionInfo>
+        <owl:versionInfo>0.2.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -78,6 +78,42 @@
      -->
 
 
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#result -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/shacl#result">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/shacl#ValidationReport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/shacl#ValidationResult"/>
+        <rdfs:comment>The validation results contained in a validation report.</rdfs:comment>
+        <rdfs:isDefinedBy>https://www.w3.org/ns/shacl.ttl</rdfs:isDefinedBy>
+        <rdfs:label>result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#resultSeverity -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/shacl#resultSeverity">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/shacl#Severity"/>
+        <rdfs:comment>The severity of the result, e.g. warning.</rdfs:comment>
+        <rdfs:isDefinedBy>https://www.w3.org/ns/shacl.ttl</rdfs:isDefinedBy>
+        <rdfs:label>result severity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#sourceConstraintComponent -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/shacl#sourceConstraintComponent">
+        <rdfs:comment>The constraint component that is the source of the result.</rdfs:comment>
+        <rdfs:isDefinedBy>https://www.w3.org/ns/shacl.ttl</rdfs:isDefinedBy>
+        <rdfs:label>source constraint component</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -170,6 +206,28 @@
     
 
 
+    <!-- https://w3id.org/def/astrea#covers -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#covers">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>Term that is covered by the shape report</rdfs:comment>
+        <rdfs:label>covers</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/astrea#isAbsentTerm -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/astrea#isAbsentTerm">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>Term that is not covered by the shape report</rdfs:comment>
+        <rdfs:label>is absent term</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/def/astrea#message -->
 
 
@@ -243,6 +301,28 @@
     
 
 
+    <!-- http://www.w3.org/ns/shacl#PatternConstraintsComponent -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/shacl#PatternConstraintsComponent">
+        <rdfs:comment>A constraint component that can be used to verify that every value node matches a given regular expression.</rdfs:comment>
+        <rdfs:isDefinedBy>https://www.w3.org/ns/shacl.ttl</rdfs:isDefinedBy>
+        <rdfs:label>Pattern constraint component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#Severity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/shacl#Severity">
+        <rdfs:comment>The class of validation result severity levels, including violation and warning levels.</rdfs:comment>
+        <rdfs:isDefinedBy>https://www.w3.org/ns/shacl.ttl</rdfs:isDefinedBy>
+        <rdfs:label>Severity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3.org/ns/shacl#Shape -->
 
 
@@ -250,6 +330,28 @@
         <rdfs:comment>A shape is a collection of constraints that may be targeted for certain nodes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/shacl.ttl"/>
         <rdfs:label>Shape</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#ValidationReport -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/shacl#ValidationReport">
+        <rdfs:comment>The class of SHACL validation reports.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/shacl.ttl"/>
+        <rdfs:label>Validation report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#ValidationResult -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/shacl#ValidationResult">
+        <rdfs:comment>The class of validation results.</rdfs:comment>
+        <rdfs:isDefinedBy>https://www.w3.org/ns/shacl.ttl</rdfs:isDefinedBy>
+        <rdfs:label>Validation result</rdfs:label>
     </owl:Class>
     
 
@@ -393,6 +495,29 @@
         </rdfs:subClassOf>
         <rdfs:comment>Report generated from an ontology or a list of ontologies that includes the list of shapes</rdfs:comment>
         <rdfs:label>Shape report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/astrea#ValidationReport -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/astrea#ValidationReport">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/shacl#ValidationReport"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#covers"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/astrea#isAbsentTerm"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Report that provides information related to the performed validation</rdfs:comment>
+        <rdfs:label>Astrea Validation Report</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
